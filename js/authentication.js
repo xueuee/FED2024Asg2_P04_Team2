@@ -1,7 +1,19 @@
 /* IN PROGRESS, PLS CHECK IF CORRECT */
 
 // Import Firebase Auth
+const { initializeApp } = require("firebase/app");
 const { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } = require("firebase/auth");
+
+// Initialize Firebase (replace this with your environment variables setup)
+const firebaseConfig = {
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID,
+};
+initializeApp(firebaseConfig);
 
 // Function to handle user sign-up with displayName
 async function signUpWithDisplayName(email, password, displayName) {
@@ -17,7 +29,19 @@ async function signUpWithDisplayName(email, password, displayName) {
 
     console.log(`User signed up successfully. Display Name: ${displayName}`);
   } catch (error) {
-    console.error(`Error during sign-up: ${error.message}`);
+    switch (error.code) {
+      case "auth/email-already-in-use":
+        console.error("This email is already in use.");
+        break;
+      case "auth/weak-password":
+        console.error("The password is too weak.");
+        break;
+      case "auth/invalid-email":
+        console.error("The email address is invalid.");
+        break;
+      default:
+        console.error(`Error: ${error.message}`);
+    }
   }
 }
 
@@ -37,10 +61,11 @@ async function signInAndGetDisplayName(email, password) {
   }
 }
 
-// Example Usage of Sign-Up
-signUpWithDisplayName("example@example.com", "examplePassword", "JohnDoe");
+// Export functions for use in other parts of the app
+module.exports = {
+  signUpWithDisplayName,
+  signInAndGetDisplayName,
+};
 
-// Example Usage of Sign-In
-signInAndGetDisplayName("example@example.com", "examplePassword");
 
 
