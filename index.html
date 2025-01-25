@@ -51,22 +51,90 @@
                     </div>
                 </nav>
              </section>
-             <!-- Left Sidebar Filter -->
-             <section id="left-sidebar">
+             <!-- Filter & Listings -->
+              <section id="filter-n-listings">
+                <!-- Left Sidebar Filter -->
+                <section id="left-sidebar">
+                        <div>
+                            <h2>Filter by games</h2>
+                            <div class="filter-container">
+                                <div class="games-img">
+                                    <input type="checkbox" id="game-option1"/>
+                                    <label for="game-option1">
+                                        <img src="images/Genshin-Impact-Logo.png" alt="Genshin Impact"/>
+                                    </label>
+                                </div>
+                                <div class="games-img">
+                                    <input type="checkbox" id="game-option2" />
+                                    <label for="game-option2">
+                                    <img src="images/Honkai-Star-Rail.png" alt="Honkai Star Rail"/>
+                                    </label>
+                                </div>
+                                <div class="games-img">
+                                    <input type="checkbox" id="game-option3" />
+                                    <label for="game-option3">
+                                    <img src="images/ZZZ-logo.png" alt="Zenless Zone Zero"/>
+                                    </label>
+                                </div>
+                                <div class="games-img">
+                                    <input type="checkbox" id="game-option4" />
+                                    <label for="game-option4">
+                                    <img src="images/Honkai-Impact-3rd-Logo.png" alt="Honkai Impact 3rd"/>
+                                    </label>
+                                </div>
+                            </div>
+                            <h2>Categories</h2>
+                            <form>
+                                <input type="checkbox" id="merch1" name="merch1" value="Badges">
+                                <label for="merch1"> Badges/Pins </label><br>
+                                <input type="checkbox" id="merch2" name="merch2" value="Clothing">
+                                <label for="merch2"> Clothing </label><br>
+                                <input type="checkbox" id="merch3" name="merch3" value="Peripherals">
+                                <label for="merch3"> Peripherals </label><br>
+                                <input type="checkbox" id="merch4" name="merch4" value="Keychains">
+                                <label for="merch4"> Keychains </label><br>
+                                <input type="checkbox" id="merch5" name="merch5" value="Plushies">
+                                <label for="merch5"> Plushies </label><br>
+                            </form>
+                        </div>
+                </section>
+                <!-- Main Listings -->
+                <section id="listings">
+                    <h1>Welcome, User1!</h1>
                     <div>
-                        <p>Filter by games</p>
+                        <h2>Recommended for you</h2>
+                        <div id="listings-container">
+                            <div class="listed-item">
+                                <div class="item-img">
+                                    <img src="images/Honkai-Impact-3rd-Logo.png"alt="item1">
+                                </div>
+                                <div class="item-info">
+                                    <p>Item name</p>
+                                </div>
+                            </div>
+                            <div class="listed-item">
+                                <div class="item-img">
+                                    <img src="images/Honkai-Impact-3rd-Logo.png"alt="item2">
+                                </div>
+                                <div class="item-info">
+                                    <p>Item name</p>
+                                </div>
+                            </div>
+                            <div class="listed-item">
+                                <div class="item-img">
+                                    <img src="images/Honkai-Impact-3rd-Logo.png"alt="item3">
+                                </div>
+                                <div class="item-info">
+                                    <p>Item name</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-             </section>
-             <!-- Main Listings -->
-             <section id="listings">
-                <h1>Welcome, User1!</h1>
-                <div>
-                    <h2>Recommended for you</h2>
-                </div>
-                <div>
-                    <h2>New Products</h2>
-                </div>
-             </section>
+                    <div>
+                        <h2>New Products</h2>
+                    </div>
+                </section>
+            </section>
         </div>
         <!-- Scripts -->
             <!-- LOTTIE SCRIPT -->
