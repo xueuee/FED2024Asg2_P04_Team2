@@ -5,6 +5,7 @@ FED Assignment 2
 
 
 Wireframe Link: 
+https://www.figma.com/design/AhdB5w0bRhpVujYtgJ5A7D/FED2024Assg2_P04_Team2_Simple_Wireframe?node-id=0-1&t=jNoSWip6f8533o0H-1
 
 ## Features
 
@@ -26,7 +27,12 @@ Wireframe Link:
 - 
 
 ### Media
-- 
+- Lottie Animation made by 
+- Hoyoverse Games Logos taken from https://www.hoyoverse.com/en-us/about-us
+- Search Icon made by [Smashicons](https://www.flaticon.com/authors/smashicons) from [Flaticon]{https://www.flaticon.com/}
+- Grocery Cart Icon made by
+- Notification Icon made by
+- Heart Icon made by 
 
 ### Acknowledgements
 - 
