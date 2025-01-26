@@ -6,6 +6,8 @@ Visit the website here: [MokeSell](https://xueuee.github.io/FED2024Asg2_P04_Team
 
 View the wireframe here: [Wireframe](https://www.figma.com/design/AhdB5w0bRhpVujYtgJ5A7D/FED2024Assg2_P04_Team2_Simple_Wireframe?node-id=0-1&t=jNoSWip6f8533o0H-1)
 
+View the [Github Repository](https://github.com/xueuee/FED2024Asg2_P04_Team2)
+
 ## Features
 
 ### Existing Features
@@ -15,6 +17,15 @@ View the wireframe here: [Wireframe](https://www.figma.com/design/AhdB5w0bRhpVuj
 - 
 
 ## Technologies Used
+- Visual Studio Code
+
+- HTML
+
+- CSS
+
+- Javascript
+
+-RestDB
 
 ## Assistive AI
 
@@ -28,7 +39,7 @@ View the wireframe here: [Wireframe](https://www.figma.com/design/AhdB5w0bRhpVuj
 ### Media
 - Lottie Animation made by 
 - Hoyoverse Games Logos taken from https://www.hoyoverse.com/en-us/about-us
-- Search Icon made by [Smashicons](https://www.flaticon.com/authors/smashicons) from [Flaticon]{https://www.flaticon.com/}
+- Search Icon made by [Smashicons](https://www.flaticon.com/authors/smashicons) from [Flaticon](https://www.flaticon.com/)
 - Grocery Cart Icon made by
 - Notification Icon made by
 - Heart Icon made by 
