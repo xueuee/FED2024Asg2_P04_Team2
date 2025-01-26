@@ -2,10 +2,9 @@
 FED Assignment 2 
 
 ## Design Process
+Visit the website here: [MokeSell](https://xueuee.github.io/FED2024Asg2_P04_Team2/)
 
-
-Wireframe Link: 
-https://www.figma.com/design/AhdB5w0bRhpVujYtgJ5A7D/FED2024Assg2_P04_Team2_Simple_Wireframe?node-id=0-1&t=jNoSWip6f8533o0H-1
+View the wireframe here: [Wireframe](https://www.figma.com/design/AhdB5w0bRhpVujYtgJ5A7D/FED2024Assg2_P04_Team2_Simple_Wireframe?node-id=0-1&t=jNoSWip6f8533o0H-1)
 
 ## Features
 

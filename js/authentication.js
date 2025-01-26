@@ -1,4 +1,4 @@
-/* IN PROGRESS, PLS CHECK IF CORRECT */
+/* OMITTED */
 
 // Import Firebase Auth
 const { initializeApp } = require("firebase/app");
@@ -66,6 +66,5 @@ module.exports = {
   signUpWithDisplayName,
   signInAndGetDisplayName,
 };
-
 
 
