@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="description" content="Explore the world of genshin.">
@@ -17,7 +17,6 @@
         <!-- Lottie script -->
         <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
     </head>
-
     <body>
         <div id="loading">
             <dotlottie-player src="https://lottie.host/39e8879d-ba55-4708-a1b2-6dc49500773a/TkkL4sSPJU.lottie"
@@ -131,18 +130,43 @@
                     </div>
                     <div>
                         <h2>New Products</h2>
+                        <div id="listings-container">
+                            <div class="listed-item">
+                                <div class="item-img">
+                                    <img src="images/Honkai-Star-Rail.png"alt="item1">
+                                </div>
+                                <div class="item-info">
+                                    <p>Item name</p>
+                                </div>
+                            </div>
+                            <div class="listed-item">
+                                <div class="item-img">
+                                    <img src="images/Honkai-Star-Rail.png"alt="item2">
+                                </div>
+                                <div class="item-info">
+                                    <p>Item name</p>
+                                </div>
+                            </div>
+                            <div class="listed-item">
+                                <div class="item-img">
+                                    <img src="images/Honkai-Star-Rail.png"alt="item3">
+                                </div>
+                                <div class="item-info">
+                                    <p>Item name</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </section>
-            <!-- (TEMPORARY, move to account.html LATER !!!) -->
-            <button onclick="logout()">Logout</button>
         </div>
         <!-- Scripts -->
             <!-- LOTTIE SCRIPT -->
          <script src="js/lottie.js"></script>
             <!-- FIREBASE SCRIPT -->
          <!-- FIREBASE AND AUTHENTICATION SCRIPT -->
-        <script type="module">
+       <!--
+       <script type="module">
         // Import Firebase SDKs
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-analytics.js";
@@ -177,6 +201,7 @@
         // Call sign-in function (for demonstration)
         signInAndGetDisplayName(email, password);
         </script>
+        -->
         <script src="js/account-info.js"></script> 
     </body>
 </html>
