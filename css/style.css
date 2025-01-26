@@ -20,7 +20,7 @@ body {
 }
 
 #main {
-    display: flex;
+    display: none;
     opacity: 0; 
     transition: opacity 1s ease-in; /* fade-in */
     gap: 10px;
