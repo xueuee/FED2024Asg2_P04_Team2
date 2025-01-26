@@ -7,7 +7,7 @@
         <meta name="author" content="MokeSell">
         <!-- Making sure website shows up as desired on mobile devices-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Login</title>
+        <title>Sign Up</title>
         <!-- Style sheets -->
         <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Irish+Grover&family=PT+Serif+Caption&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Irish+Grover&family=Julius+Sans+One&family=PT+Serif+Caption&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
@@ -16,38 +16,38 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-            <!-- Header -->
-            <section id="header">
-                <header>
-                    <h1>MOKESELL</h1>
-                    <p>IN COLLABORATION WITH HOYOVERSE</p>
-                </header>
-                <!-- Navigation -->
-                <nav>
-                    <ul id="navbar">
-                    </ul>
-                </nav>
-            </section>
-            <!-- Login -->
-            <section id="login">
-                <h2>LOGIN</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="login-username"></label>
-                        <input type="text" id="login-username" name="username" placeholder="USERNAME">
-                    </div>
-                    <div class="form-group">
-                        <label for="login-password"></label>
-                        <input type="password" id="login-password" name="password" placeholder="PASSWORD">
-                    </div>
-                    <button id="login-submit">Login</button>
-                </form>
-            </section>
-            <a href="signup.html">sign up</a>
+        <!-- Header -->
+        <section id="header">
+            <header>
+                <h1>MOKESELL</h1>
+                <p>IN COLLABORATION WITH HOYOVERSE</p>
+            </header>
+            <!-- Navigation -->
+            <nav>
+                <ul id="navbar">
+                </ul>
+            </nav>
+        </section>
+        <!-- Sign Up -->
+        <section id="signup">
+            <h2>USER SIGN UP</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <input type="text" id="username" name="username" placeholder="USERNAME" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="user-email" name="email" placeholder="EMAIL" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="user-password" name="password" placeholder="PASSWORD" required>
+                </div>
+                <button id="user-submit">Sign Up</button>
+            </form>
+            <a href="login.html">login</a>
             <!-- !! REMOVE 'continue as Guest' later, testing purposes-->
-            <br>
-            <a href="index.html">continue as Guest</a>
-        <!-- Scripts -->
-         <script src="js/account-info.js"></script>
+            <br> 
+            <a href="index.html">continue as Guest (temporary)</a>
+        </section>
+        <script src="js/account-info.js"></script>
     </body>
 </html>
