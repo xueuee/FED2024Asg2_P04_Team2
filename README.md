@@ -30,7 +30,11 @@ View the [Github Repository](https://github.com/xueuee/FED2024Asg2_P04_Team2)
 ## Assistive AI
 
 ## Testing
-
+Account details to log into an existing account:
+Username: User1
+Password: user1
+Email: user1@gmail.com (can be used to test on sign up page)
+Tester may feel free to create their own accounts on the sign up page as well.
 
 ## Credits
 ### Content
