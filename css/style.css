@@ -129,6 +129,16 @@ nav div {
 }
 
 /*------------------------------------------------------------------------*/
+/* LOGIN & SIGNUP */
+#login, #signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: lightgrey;
+    margin: 150px;
+}
+
+/*------------------------------------------------------------------------*/
 /* FILTER & LISTINGS positioning */
 #filter-n-listings {
     display: flex;
@@ -192,7 +202,8 @@ form input[type="checkbox"] {
 
 /*------------------------------------------------------------------------*/
 /* LISTINGS SECTION */
-#listings {
+/* General padding for other sections */
+#listings, #profile, #faq, #ai-chatbot{
     padding: 15px 30px;
 }
 
@@ -237,18 +248,16 @@ form input[type="checkbox"] {
 
 /*------------------------------------------------------------------------*/
 /* ACCOUNT */
-#profile {
-    padding: 15px 30px;
-}
-
 #profile-container {
     display: flex;
     flex-direction: row;
+    gap: 40px;
 }
 
 #profile-n-codes {
     display: flex;
     flex-direction: row;
+    gap: 20%;
 }
 
 .user-profile-pic img{
@@ -261,19 +270,24 @@ form input[type="checkbox"] {
 .code-box {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     background-color: lightgrey;
 }
 
 .code-button {
     background-color: grey;
-    padding: 1px 14px;
+    padding: 1px 15px;
     margin: 15px;
-    align-items: center;
+    min-width: 40%;
+    text-align: center;
 }
+
+/*
+@media screen and (max-width: 800px) { /* 500px for mobile? */
 
 /* Daily Check-in */
 #check-in-container {
-    background: lightgrey;
     padding: 10px;
 }
 
@@ -282,14 +296,48 @@ form input[type="checkbox"] {
     flex-direction: row;
     gap: 10px;
     align-content: center;
+    padding: 15px 15px;
+    background: lightgrey;
 }
 
 /* Other Options */
 
 /*------------------------------------------------------------------------*/
 /* ABOUT */
+.faq-questions {
+    padding: 15px 30px;
+    margin: 5px -40px;
+    width: 100%;
+    background: rgb(193, 193, 193);
+}
 
+#deals {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /*------------------------------------------------------------------------*/
 /* CONTACT US */
+#chat-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    margin: 20px;
+    background: lightgrey;
+}
 
+.ai-response {
+    background: grey;
+    border-radius: 10px;
+}
+
+.user-response {
+    background: rgb(175, 175, 175);
+    border-radius: 10px;
+}
+
+.ai-response p, .user-response p {
+    padding: 5px 15px;
+}
