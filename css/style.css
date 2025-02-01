@@ -234,3 +234,62 @@ form input[type="checkbox"] {
     background: grey;
     border-radius: 0 0 15px 15px;
 }
+
+/*------------------------------------------------------------------------*/
+/* ACCOUNT */
+#profile {
+    padding: 15px 30px;
+}
+
+#profile-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#profile-n-codes {
+    display: flex;
+    flex-direction: row;
+}
+
+.user-profile-pic img{
+    border-radius: 100px;
+    width: 200px;
+    height: auto;
+}
+
+/* Active Codes */
+.code-box {
+    display: flex;
+    flex-direction: row;
+    background-color: lightgrey;
+}
+
+.code-button {
+    background-color: grey;
+    padding: 1px 14px;
+    margin: 15px;
+    align-items: center;
+}
+
+/* Daily Check-in */
+#check-in-container {
+    background: lightgrey;
+    padding: 10px;
+}
+
+.check-in-items {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-content: center;
+}
+
+/* Other Options */
+
+/*------------------------------------------------------------------------*/
+/* ABOUT */
+
+
+/*------------------------------------------------------------------------*/
+/* CONTACT US */
+
