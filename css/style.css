@@ -381,8 +381,17 @@ form input[type="checkbox"] {
 
 /*------------------------------------------------------------------------*/
 /* ABOUT */
+#faq {
+    padding: 5px 15px;
+}
+
+#faq li {
+    list-style: none;
+    padding: 0 5px;
+}
+
 .faq-questions {
-    padding: 15px 30px;
+    padding: 15px;
     margin: 5px -40px;
     width: 100%;
     background: rgb(193, 193, 193);
@@ -392,6 +401,7 @@ form input[type="checkbox"] {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 15px;
 }
 
 /*------------------------------------------------------------------------*/
