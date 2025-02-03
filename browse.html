@@ -7,8 +7,9 @@
         <meta name="author" content="MokeSell">
         <!-- Making sure website shows up as desired on mobile devices-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Browse</title>
+        <title>MokeSell</title>
         <!-- Style sheets -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
         <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Irish+Grover&family=PT+Serif+Caption&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Irish+Grover&family=Julius+Sans+One&family=PT+Serif+Caption&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Irish+Grover&family=Julius+Sans+One&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Serif+Caption&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
@@ -16,131 +17,174 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <!-- Header -->
-        <section id="header">
-            <header>
-                <h1>MOKESELL</h1>
-                <h2>IN COLLABORATION WITH HOYOVERSE</h2>
-            </header>
-            <!-- Navigation -->
-            <nav>
-                <ul id="navbar">
-                    <li><a href="index.html" class="active">HOME</a></li>
-                    <li><a href="browse.html">BROWSE</a></li>
-                    <li><a href="account.html">ACCOUNT</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="contact-us.html">CONTACT US</a></li>
-                </ul>
-                <div id="search">
-                    <p>Search...</p>
-                    <img src="images/search.png" alt="search icon">
-                </div>
-            </nav>
-        </section>
-            <!-- Filter & Listings -->
-        <section id="filter-n-listings">
-            <!-- Left Sidebar Filter -->
-            <section id="left-sidebar">
-                    <div>
-                        <h2>Filter by games</h2>
-                        <div class="filter-container">
-                            <div class="games-img">
-                                <input type="checkbox" id="game-option1"/>
-                                <label for="game-option1">
-                                    <img src="images/Genshin-Impact-Logo.png" alt="Genshin Impact"/>
-                                </label>
-                            </div>
-                            <div class="games-img">
-                                <input type="checkbox" id="game-option2" />
-                                <label for="game-option2">
-                                <img src="images/Honkai-Star-Rail.png" alt="Honkai Star Rail"/>
-                                </label>
-                            </div>
-                            <div class="games-img">
-                                <input type="checkbox" id="game-option3" />
-                                <label for="game-option3">
-                                <img src="images/ZZZ-logo.png" alt="Zenless Zone Zero"/>
-                                </label>
-                            </div>
-                            <div class="games-img">
-                                <input type="checkbox" id="game-option4" />
-                                <label for="game-option4">
-                                <img src="images/Honkai-Impact-3rd-Logo.png" alt="Honkai Impact 3rd"/>
-                                </label>
-                            </div>
-                        </div>
-                        <h2>Categories</h2>
-                        <form>
-                            <input type="checkbox" id="merch1" name="merch1" value="Badges">
-                            <label for="merch1"> Badges/Pins </label><br>
-                            <input type="checkbox" id="merch2" name="merch2" value="Clothing">
-                            <label for="merch2"> Clothing </label><br>
-                            <input type="checkbox" id="merch3" name="merch3" value="Peripherals">
-                            <label for="merch3"> Peripherals </label><br>
-                            <input type="checkbox" id="merch4" name="merch4" value="Keychains">
-                            <label for="merch4"> Keychains </label><br>
-                            <input type="checkbox" id="merch5" name="merch5" value="Plushies">
-                            <label for="merch5"> Plushies </label><br>
-                        </form>
+        <div id="main">
+            <!-- Header -->
+            <section id="header">
+                <header>
+                    <h1>MOKESELL</h1>
+                    <h2>IN COLLABORATION WITH HOYOVERSE</h2>
+                </header>
+                <!-- Navigation -->
+                <nav>
+                    <ul id="navbar">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="browse.html"  class="active">BROWSE</a></li>
+                        <li><a href="account.html">ACCOUNT</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="contact-us.html">CONTACT US</a></li>
+                        <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    </ul>
+                    <div id="search">
+                        <p>Search...</p>
+                        <img src="images/search.png" alt="search icon">
                     </div>
+                </nav>
             </section>
-            <!-- Main Listings -->
-            <section id="listings">
-                <div>
-                    <h2>All Products</h2>
-                    <div id="listings-container">
-                        <div class="listed-item">
-                            <div class="item-img">
-                                <img src="images/Honkai-Impact-3rd-Logo.png"alt="item1">
+             <!-- Filter & Listings -->
+            <section id="filter">
+                <!-- Left Sidebar Filter -->
+                <section id="left-sidebar">
+                        <div>
+                            <h2>Filter by games</h2>
+                            <div class="filter-container">
+                                <div class="games-img">
+                                    <input type="checkbox" id="game-option1"/>
+                                    <label for="game-option1">
+                                        <img src="images/Genshin-Impact-Logo.png" alt="Genshin Impact"/>
+                                    </label>
+                                </div>
+                                <div class="games-img">
+                                    <input type="checkbox" id="game-option2" />
+                                    <label for="game-option2">
+                                    <img src="images/Honkai-Star-Rail.png" alt="Honkai Star Rail"/>
+                                    </label>
+                                </div>
+                                <div class="games-img">
+                                    <input type="checkbox" id="game-option3" />
+                                    <label for="game-option3">
+                                    <img src="images/ZZZ-logo.png" alt="Zenless Zone Zero"/>
+                                    </label>
+                                </div>
+                                <div class="games-img">
+                                    <input type="checkbox" id="game-option4" />
+                                    <label for="game-option4">
+                                    <img src="images/Honkai-Impact-3rd-Logo.png" alt="Honkai Impact 3rd"/>
+                                    </label>
+                                </div>
                             </div>
-                            <div class="item-info">
-                                <p>Item name</p>
-                            </div>
+                            <h2>Categories</h2>
+                            <form>
+                                <input type="checkbox" id="merch1" name="merch1" value="Badges">
+                                <label for="merch1"> Badges/Pins </label><br>
+                                <input type="checkbox" id="merch2" name="merch2" value="Clothing">
+                                <label for="merch2"> Clothing </label><br>
+                                <input type="checkbox" id="merch3" name="merch3" value="Peripherals">
+                                <label for="merch3"> Peripherals </label><br>
+                                <input type="checkbox" id="merch4" name="merch4" value="Keychains">
+                                <label for="merch4"> Keychains </label><br>
+                                <input type="checkbox" id="merch5" name="merch5" value="Plushies">
+                                <label for="merch5"> Plushies </label><br>
+                            </form>
                         </div>
-                        <div class="listed-item">
-                            <div class="item-img">
-                                <img src="images/Honkai-Impact-3rd-Logo.png"alt="item2">
+                </section>
+                <!-- Main Listings -->
+                <section id="listings" class="section-listings">
+                    <h1 class="all">All products</h1>
+                    <div class="pro-container">
+                        <div class="pro">
+                            <img src="images/HSR Products/Small Plush.webp" alt="">
+                            <div class="des">
+                                <span>Honkai Star Rail</span>
+                                <h5>Honkai Star Rail Small Character Plush</h5>
+                                <h4>$29.00</h4>
                             </div>
-                            <div class="item-info">
-                                <p>Item name</p>
-                            </div>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
                         </div>
-                        <div class="listed-item">
-                            <div class="item-img">
-                                <img src="images/Honkai-Impact-3rd-Logo.png"alt="item3">
+                        <div class="pro">
+                            <img src="images/Genshin Products/Xiao Jacket.webp" alt="">
+                            <div class="des">
+                                <span>Genshin Impact</span>
+                                <h5>Genshin Impact Xiao Jacket Clothing</h5>
+                                <h4>$107.99</h4>
                             </div>
-                            <div class="item-info">
-                                <p>Item name</p>
-                            </div>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
                         </div>
-                        <div class="listed-item">
-                            <div class="item-img">
-                                <img src="images/Honkai-Impact-3rd-Logo.png"alt="item3">
+                        <div class="pro">
+                            <img src="images/Genshin Products/Saurian Plush.webp" alt="">
+                            <div class="des">
+                                <span>Genshin Impact</span>
+                                <h5>Genshin Impact Baby Saurian Natlan Plushie</h5>
+                                <h4>$59.99</h4>
                             </div>
-                            <div class="item-info">
-                                <p>Item name</p>
-                            </div>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
                         </div>
-                        <div class="listed-item">
-                            <div class="item-img">
-                                <img src="images/Honkai-Impact-3rd-Logo.png"alt="item3">
+                        <div class="pro">
+                            <img src="images/Genshin Products/Small Plush.webp" alt="">
+                            <div class="des">
+                                <span>Genshin Impact</span>
+                                <h5>Genshin Impact Small Character Plush</h5>
+                                <h4>$29.00</h4>
                             </div>
-                            <div class="item-info">
-                                <p>Item name</p>
-                            </div>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
                         </div>
-                        <div class="listed-item">
-                            <div class="item-img">
-                                <img src="images/Honkai-Impact-3rd-Logo.png"alt="item3">
+                        <div class="pro">
+                            <img src="images/HSR Products/Kafka Keyboard.webp" alt="">
+                            <div class="des">
+                                <span>Honkai Star Rail</span>
+                                <h5>Honkai Star Rail Kafka Keyboard Peripheral</h5>
+                                <h4>$249.99</h4>
                             </div>
-                            <div class="item-info">
-                                <p>Item name</p>
-                            </div>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
                         </div>
+                        <div class="pro">
+                            <img src="images/HI3 Products/Pin Badge.webp" alt="">
+                            <div class="des">
+                                <span>Honkai Impact 3</span>
+                                <h5>Honkai Impact 3 Pin Badge</h5>
+                                <h4>$16.99</h4>
+                            </div>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        <div class="pro">
+                            <img src="images/HSR Products/Keychain.webp" alt="">
+                            <div class="des">
+                                <span>Honkai Star Rail</span>
+                                <h5>Honkai Star Rail Waggy Tail Keychain</h5>
+                                <h4>$19.99</h4>
+                            </div>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        <div class="pro">
+                            <img src="images/ZZZ Products/Zenless Mousepad.webp" alt="">
+                            <div class="des">
+                                <span>Zenless Zone Zero</span>
+                                <h5>Zenless Zone Zero Mousepad Peripheral</h5>
+                                <h4>$35.00</h4>
+                            </div>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        <div class="pro">
+                            <img src="images/HSR Products/Amphoreus Badge.webp" alt="">
+                            <div class="des">
+                                <span>Honkai Star Rail</span>
+                                <h5>Honkai Star Rail Amphoreus' Saga of Heroes Badge</h5>
+                                <h4>$11.99</h4>
+                            </div>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        <p>~ More to be added soon! ~</p>
                     </div>
-                </div>
+                </section>
             </section>
+        </div>
+        <section id="footer-container">
+            <footer class="foot">
+                <img src="images/HoYoverse-Logo.png" alt="HoYoverse Logo">
+                <h4>Copyright © COGNOSPHERE & MokeSell. All Rights Reserved.</h4>
+            </footer>
         </section>
         <!-- Scripts -->
+        <!-- ACCOUNT INFO SCRIPT -->
+        <script src="js/account-info.js"></script>
     </body>
 </html>
