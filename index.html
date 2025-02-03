@@ -12,6 +12,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Irish+Grover&family=PT+Serif+Caption&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Irish+Grover&family=Julius+Sans+One&family=PT+Serif+Caption&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Irish+Grover&family=Julius+Sans+One&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Serif+Caption&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
@@ -40,6 +41,7 @@
                         <li><a href="account.html">ACCOUNT</a></li>
                         <li><a href="about.html">ABOUT</a></li>
                         <li><a href="contact-us.html">CONTACT US</a></li>
+                        <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
                     </ul>
                     <div id="search">
                         <p>Search...</p>
@@ -95,64 +97,93 @@
                         </div>
                 </section>
                 <!-- Main Listings -->
-                <section id="listings">
+                <section id="listings" class="section-listings">
                     <h1 class="loggedInUser">Welcome, Guest!</h1>
-                    <div>
-                        <h2>Recommended for you</h2>
-                        <div id="listings-container">
-                            <div class="listed-item">
-                                <div class="item-img">
-                                    <img src="images/Honkai-Impact-3rd-Logo.png"alt="item1">
-                                </div>
-                                <div class="item-info">
-                                    <p>Item name</p>
-                                </div>
+                    <h2>Recommended for you</h2>
+                    <div class="pro-container">
+                        <div class="pro">
+                            <img src="images/HSR Products/Small Plush.webp" alt="">
+                            <div class="des">
+                                <span>Honkai Star Rail</span>
+                                <h5>Honkai Star Rail Small Character Plush</h5>
+                                <h4>$29.00</h4>
                             </div>
-                            <div class="listed-item">
-                                <div class="item-img">
-                                    <img src="images/Honkai-Impact-3rd-Logo.png"alt="item2">
-                                </div>
-                                <div class="item-info">
-                                    <p>Item name</p>
-                                </div>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        <div class="pro">
+                            <img src="images/Genshin Products/Saurian Plush.webp" alt="">
+                            <div class="des">
+                                <span>Genshin Impact</span>
+                                <h5>Genshin Impact Baby Saurian Natlan Plushie</h5>
+                                <h4>$59.99</h4>
                             </div>
-                            <div class="listed-item">
-                                <div class="item-img">
-                                    <img src="images/Honkai-Impact-3rd-Logo.png"alt="item3">
-                                </div>
-                                <div class="item-info">
-                                    <p>Item name</p>
-                                </div>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        <div class="pro">
+                            <img src="images/ZZZ Products/Zenless Mousepad.webp" alt="">
+                            <div class="des">
+                                <span>Zenless Zone Zero</span>
+                                <h5>Zenless Zone Zero Mousepad Peripheral</h5>
+                                <h4>$35.00</h4>
                             </div>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
                         </div>
                     </div>
-                    <div>
-                        <h2>New Products</h2>
-                        <div id="listings-container">
-                            <div class="listed-item">
-                                <div class="item-img">
-                                    <img src="images/Honkai-Star-Rail.png"alt="item1">
-                                </div>
-                                <div class="item-info">
-                                    <p>Item name</p>
-                                </div>
+                    <h2>New Products</h2>
+                    <div class="pro-container">
+                        <div class="pro">
+                            <img src="images/Genshin Products/Small Plush.webp" alt="">
+                            <div class="des">
+                                <span>Genshin Impact</span>
+                                <h5>Genshin Impact Small Character Plush</h5>
+                                <h4>$29.00</h4>
                             </div>
-                            <div class="listed-item">
-                                <div class="item-img">
-                                    <img src="images/Honkai-Star-Rail.png"alt="item2">
-                                </div>
-                                <div class="item-info">
-                                    <p>Item name</p>
-                                </div>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        <div class="pro">
+                            <img src="images/HI3 Products/Chibi Figure.webp" alt="">
+                            <div class="des">
+                                <span>Honkai Impact 3</span>
+                                <h5>Honkai Impact 3 Chibi Figure</h5>
+                                <h4>$39.99</h4>
                             </div>
-                            <div class="listed-item">
-                                <div class="item-img">
-                                    <img src="images/Honkai-Star-Rail.png"alt="item3">
-                                </div>
-                                <div class="item-info">
-                                    <p>Item name</p>
-                                </div>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        <div class="pro">
+                            <img src="images/HSR Products/Keychain.webp" alt="">
+                            <div class="des">
+                                <span>Honkai Star Rail</span>
+                                <h5>Honkai Star Rail Waggy Tail Keychain</h5>
+                                <h4>$19.99</h4>
                             </div>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        <div class="pro">
+                            <img src="images/HSR Products/Kafka Keyboard.webp" alt="">
+                            <div class="des">
+                                <span>Honkai Star Rail</span>
+                                <h5>Honkai Star Rail Kafka Keyboard Peripheral</h5>
+                                <h4>$249.99</h4>
+                            </div>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        <div class="pro">
+                            <img src="images/Genshin Products/Xiao Jacket.webp" alt="">
+                            <div class="des">
+                                <span>Genshin Impact</span>
+                                <h5>Genshin Impact Xiao Jacket Clothing</h5>
+                                <h4>$107.99</h4>
+                            </div>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                        <div class="pro">
+                            <img src="images/HSR Products/Amphoreus Badge.webp" alt="">
+                            <div class="des">
+                                <span>Honkai Star Rail</span>
+                                <h5>Honkai Star Rail Amphoreus' Saga of Heroes Badge</h5>
+                                <h4>$11.99</h4>
+                            </div>
+                            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
                         </div>
                     </div>
                 </section>

@@ -30,7 +30,10 @@ body {
     font-family: 'Julius Sans One', sans-serif;
     color: black;
     text-align: center;
-    position: relative;
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 
 #header header h1 {
@@ -56,9 +59,13 @@ nav {
     background-color: grey;
     padding-left: 35px;
     display: flex; 
-    justify-content: flex-start;
-    gap: 500px;
+    justify-content: space-between;
+    align-items: center;
     width: auto;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 
 #navbar {
@@ -69,6 +76,11 @@ nav {
     padding: 0;
     gap: 50px;
     list-style: none;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
 }
 
 #navbar li a {
@@ -110,7 +122,7 @@ nav div {
     background-color: rgb(216, 216, 216);
     border-radius: 25px;    /* corner rounding */
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
     width: 300px;  /* width is only compatible on desktop */
     height: 40px;
@@ -196,54 +208,72 @@ form input[type="checkbox"] {
     cursor: pointer;
     accent-color: lightgrey;
     margin: 10px 5px 20px 15px;
-    transform: scale(1.8); /* Increase checkbox size */
+    width: 18px;
+    height: 18px;
     outline: none;
 }
 
 /*------------------------------------------------------------------------*/
 /* LISTINGS SECTION */
 /* General padding for other sections */
-#listings, #profile, #faq, #ai-chatbot{
-    padding: 15px 30px;
+
+/* Product Card */
+#listings .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 15px; /* Increased padding for better spacing */
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+    background: white;
+    text-align: center;
 }
 
-#listings h1 {
-    margin-bottom: 0;
-    font-family: 'Julius Sans One', sans-serif;
-    font-size: 30px;
-    margin: 0;
+#listings .pro:hover {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05); /* Slight scale effect on hover */
 }
 
-#listings-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    padding: 0 10px 0 0;
-    gap: 15px;
-}
-
-/* Listed Items */
-.listed-item {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 200px;
-    max-width: 250px;
-}
-
-.item-img img {
+#listings .pro img {
     width: 100%;
     height: auto;
-    border-radius: 15px 15px 0 0;
+    border-radius: 20px;
+    object-fit: cover;
 }
 
-.item-info {
-    text-align: left;
-    font-family: 'Kanit', sans-serif;
-    padding-left: 10px;
-    background: grey;
-    border-radius: 0 0 15px 15px;
+/* Text styles */
+#listings .pro .des {
+    text-align: center;
+    padding: 10px 5px;
+}
+
+#listings .pro .des span {
+    color: black;
+    font-size: 13px;
+    font-weight: 600;
+    display: block;
+}
+
+#listings .pro .des h5 {
+    color: #222; /* Darkened for better readability */
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#listings .pro h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(128, 128, 248);
+}
+
+/* Product Container Adjustments */
+.pro-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /*------------------------------------------------------------------------*/
