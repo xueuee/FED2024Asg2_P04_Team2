@@ -32,7 +32,7 @@ body {
 /*------------------------------------------------------------------------*/
 /* HEADER */
 #header {
-    background-image: url("/images/header bg.webp"); /* Corrected file path */
+    background-image: url("images/header bg.webp"); /* Corrected file path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; /* Prevents tiling */
@@ -433,7 +433,7 @@ form input[type="checkbox"] {
 /* FOOTER */
 
 #footer-container {
-    background-image: url("/images/header bg.webp");
+    background-image: url("images/header bg.webp");
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
