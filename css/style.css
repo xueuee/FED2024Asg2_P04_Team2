@@ -32,7 +32,7 @@ body {
 /*------------------------------------------------------------------------*/
 /* HEADER */
 #header {
-    background-image: url("images/header bg.webp"); /* Corrected file path */
+    background-image: url("/images/header bg.webp"); /* Corrected file path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; /* Prevents tiling */
@@ -326,6 +326,7 @@ form input[type="checkbox"] {
 /*------------------------------------------------------------------------*/
 /* ACCOUNT */
 #profile-container {
+    padding: 20px 15px;
     display: flex;
     flex-direction: row;
     gap: 40px;
@@ -365,7 +366,7 @@ form input[type="checkbox"] {
 
 /* Daily Check-in */
 #check-in-container {
-    padding: 10px;
+    padding: 0px 10px;
 }
 
 .check-in-items {
@@ -433,7 +434,7 @@ form input[type="checkbox"] {
 /* FOOTER */
 
 #footer-container {
-    background-image: url("images/header bg.webp");
+    background-image: url("/images/header bg.webp");
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
