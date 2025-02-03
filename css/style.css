@@ -326,7 +326,7 @@ form input[type="checkbox"] {
 /*------------------------------------------------------------------------*/
 /* ACCOUNT */
 #profile-container {
-    padding: 20px 15px;
+    padding: 10px 15px;
     display: flex;
     flex-direction: row;
     gap: 40px;
@@ -366,7 +366,7 @@ form input[type="checkbox"] {
 
 /* Daily Check-in */
 #check-in-container {
-    padding: 0px 10px;
+    padding: 10px;
 }
 
 .check-in-items {
