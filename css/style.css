@@ -32,7 +32,7 @@ body {
 /*------------------------------------------------------------------------*/
 /* HEADER */
 #header {
-    background-image: url("/images/header bg.webp"); /* Corrected file path */
+    background-image: url("https://xueuee.github.io/FED2024Asg2_P04_Team2/images/Logos/Header-BG.webp"); /* Corrected file path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; /* Prevents tiling */
@@ -41,8 +41,6 @@ body {
     font-family: 'Julius Sans One', sans-serif;
     color: black;
     text-align: center;
-    z-index: 1000;
-    position: sticky;
     top: 0;
     left: 0;
     height: 150px; /* Ensure the header has height */
@@ -75,8 +73,6 @@ nav {
     justify-content: space-between;
     align-items: center;
     width: auto;
-    z-index: 999;
-    position: sticky;
     top: 0;
     left: 0;
 }
@@ -468,10 +464,10 @@ form input[type="checkbox"] {
 /* FOOTER */
 
 #footer-container {
-    background-image: url("/images/header bg.webp");
+    background-image: url("https://xueuee.github.io/FED2024Asg2_P04_Team2/images/Logos/Header-BG.webp"); /* Corrected file path */
     background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat; /* Prevents tiling */
     font-size: 16px;
     font-family: 'Julius Sans One', sans-serif;
     color: black;
