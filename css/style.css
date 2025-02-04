@@ -208,6 +208,7 @@ nav div {
     display: flex;
     flex-direction: column;
     background: #cfcfcf;
+    margin-top: 14px;
 }
 
 /* Filter by games */
@@ -260,6 +261,7 @@ form input[type="checkbox"] {
 
 /*------------------------------------------------------------------------*/
 /* LISTINGS SECTION */
+
 /* General padding for other sections */
 #listings h1 {
     padding-left: 10px;
