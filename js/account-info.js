@@ -94,10 +94,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
     if (loggedInUser) {
-        const welcomeElement = document.querySelector(".loggedInUser");
-        if (welcomeElement) {
-            welcomeElement.textContent = `Welcome, ${loggedInUser.username}!`;
-        }
+        const welcomeElements = document.querySelectorAll(".loggedInUser");
+    
+        welcomeElements.forEach((element) => {
+            if (window.location.pathname.includes("account.html")) {
+                element.textContent = loggedInUser.username;
+            } else if (window.location.pathname.includes("index.html")) {
+                element.textContent = `Ad Astra Abyssosque, ${loggedInUser.username}!`;
+            }
+        });
     }
 
     // [Logout Functionality]
