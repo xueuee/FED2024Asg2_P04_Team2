@@ -377,6 +377,10 @@ form input[type="checkbox"] {
     margin-top: auto; /* Pushes it to the bottom */
 }
 
+#recommended:has(.pro-container:empty) {
+    display: none;
+}
+
 /*------------------------------------------------------------------------*/
 /* ACCOUNT */
 #profile-container {
