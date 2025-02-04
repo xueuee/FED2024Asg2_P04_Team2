@@ -192,11 +192,12 @@ nav div {
 
 .filter-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(2, 1fr); /* Keep it 2 columns */
+    gap: 15px; /* Space between items */
     justify-content: center;
     align-items: center;
-  }
+    padding: 10px 20px; /* Add padding to create gaps on the sides */
+}
 
 .filter-container label {
     cursor: pointer;
@@ -205,7 +206,7 @@ nav div {
 .filter-container img {
     box-shadow: 0 0 0 5px transparent;
     transition: box-shadow 0.1s;
-    width: 120px;
+    width: 110px; /* Keep size consistent */
     border-radius: 10px;
 }
 
