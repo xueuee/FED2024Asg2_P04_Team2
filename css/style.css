@@ -208,6 +208,7 @@ nav div {
     display: flex;
     flex-direction: column;
     background: #cfcfcf;
+    margin-top: 12px;
 }
 
 /* Filter by games */
