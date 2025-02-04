@@ -32,7 +32,7 @@ body {
 /*------------------------------------------------------------------------*/
 /* HEADER */
 #header {
-    background-image: url("/images/Logos/Header-BG.webp"); /* Corrected file path */
+    background-image: url("https://xueuee.github.io/FED2024Asg2_P04_Team2/images/Logos/Header-BG.webp"); /* Corrected file path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; /* Prevents tiling */
@@ -431,7 +431,7 @@ form input[type="checkbox"] {
 /* FOOTER */
 
 #footer-container {
-    background-image: url("/images/Logos/Header-BG.webp"); /* Corrected file path */
+    background-image: url("https://xueuee.github.io/FED2024Asg2_P04_Team2/images/Logos/Header-BG.webp"); /* Corrected file path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; /* Prevents tiling */
