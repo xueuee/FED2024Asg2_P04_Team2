@@ -72,7 +72,7 @@ nav {
     display: flex; 
     justify-content: space-between;
     align-items: center;
-    width: auto;
+    width: 100%;
     top: 0;
     left: 0;
 }
@@ -85,6 +85,7 @@ nav {
     padding: 0;
     gap: 50px;
     list-style: none;
+    flex-grow: 0;
 }
 
 #navbar li {
@@ -126,19 +127,33 @@ nav {
     width: 100%; /* Underline grows to full width */
 }
 
+/* Notification bell and cart icons */
+#icons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+    padding-right: 10px;
+    padding-left: 10%; 
+}
+
+#icons a, #icons i {
+    font-size: 20px; 
+    color: black;
+}
+
 /*Search bar*/
-nav div {
+nav #search {
     background-color: #d5d4d9;
-    border-radius: 25px;    /* corner rounding */
+    border-radius: 25px; 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 25%;  /* width is only compatible on desktop */
+    width: 20%;  /* width is only compatible on desktop */
     height: 40px;
     margin: 10px;
 }
 
-#search {
+#search p {
     color: #666569;
     font-family: 'Kanit';
     padding-left: 20px;
@@ -211,6 +226,12 @@ nav div {
     flex-direction: column;
     background: linear-gradient(110deg, rgb(164, 182, 211), rgb(192, 167, 214), rgb(187, 164, 198), rgb(169, 159, 194), rgb(151, 169, 198));
     margin-top: 14px;
+}
+
+@media screen and (max-width: 1350px) {
+    #left-sidebar {
+        margin-top: 27px;
+    }
 }
 
 /* Filter by games */
@@ -542,9 +563,16 @@ form input[type="checkbox"] {
 }
 
 #profile-n-codes {
+    margin: 20px;
     display: flex;
     flex-direction: row;
     gap: 20%;
+}
+
+@media screen and (max-width: 1450px) {
+    #profile-n-codes {
+        margin-top: 30px;
+    }
 }
 
 .user-profile-pic img{
