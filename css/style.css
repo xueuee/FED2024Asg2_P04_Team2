@@ -343,14 +343,40 @@ form input[type="checkbox"] {
 .pro-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center; /* Center items in the row */
+    align-items: flex-start; /* Align items at the top */
+    gap: 15px; /* Even spacing */
+    padding: 20px 0; /* Reduce excess space above */
+    min-height: 60vh; /* Prevent layout shifts */
+}
+
+.pro-container:empty {
+    display: flex;
     justify-content: center;
-    padding-top: 0;
+    align-items: center;
+    min-height: 60vh; /* Adjust as needed */
+    font-size: 18px;
+    font-weight: bold;
+    color: gray;
+    text-align: center;
+}
+
+.pro-container:has(.pro:only-child) {
+    display: flex;
+    justify-content: center;
 }
 
 .pro-container p {
     font-size: 16px;
     font-weight: bold;
     color: gray;
+    width: 100%;
+    text-align: center;
+    margin-top: auto; /* Pushes it to the bottom */
+}
+
+#recommended:has(.pro-container:empty) {
+    display: none;
 }
 
 /*------------------------------------------------------------------------*/
