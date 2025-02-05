@@ -385,23 +385,73 @@ form input[type="checkbox"] {
     padding-left: 20px;
 }
 
-.product-container {
-    padding: 50px 10px;
-    gap: 20px;
+#product-page .product-container {
     display: flex;
+    align-items: center;  /* Ensures vertical alignment */
+    justify-content: left;
+    gap: 40px;  /* Adds spacing between image and details */
+    padding: 0 10px;
 }
 
-#product-page img { /* to do: adjust size according to screen, compatibility*/
-    border-radius: 20px;
+/* Product Image Container */
+.product-img {
+    padding-top: 5vh;
+    position: relative;
     width: 400px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#more-products .product-container {
+.product-img img {
+    width: 50vh;
+    border-radius: 20px;
+}
+
+/* Product Details: Limits width for a balanced layout */
+.product-details {
+    max-width: 450px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Navigation Buttons */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: lightgray;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.nav-button.left {
+    left: 10px;
+}
+
+.nav-button.right {
+    right: 10px;
+}
+
+.nav-button:hover {
+    background: rgba(0, 0, 0, 0.8);
 }
 
 /* Product Card */
+#more-products .product-container {
+    display: flex;
+    align-items: center;  /* Ensures vertical alignment */
+    justify-content: center;
+    gap: 40px;  /* Adds spacing between image and details */
+}
+
 #more-products .pro {
     width: 23%;
     min-width: 250px;
@@ -427,7 +477,12 @@ form input[type="checkbox"] {
     border-radius: 20px;
     object-fit: fill;
 }
+
 /* Text styles */
+#more-products h2 {
+    padding: 0 15px;
+}
+
 #more-products .pro .des {
     text-align: center;
     padding: 10px 5px;
@@ -446,6 +501,22 @@ form input[type="checkbox"] {
     font-weight: bold;
 }
 
+#more-products .pro .des h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(128, 128, 248);
+}
+
+#more-products .pro .cart {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: white;
+    font-weight: 500;
+    color: #088178;
+    border: 1px solid #cce7d0;
+}
 
 /*------------------------------------------------------------------------*/
 /* ACCOUNT */

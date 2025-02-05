@@ -7,8 +7,10 @@
         <meta name="author" content="MokeSell">
         <!-- Making sure website shows up as desired on mobile devices-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contact Us</title>
+        <title>MokeSell</title>
         <!-- Style sheets -->
+        <!-- Style sheets -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
         <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Irish+Grover&family=PT+Serif+Caption&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Irish+Grover&family=Julius+Sans+One&family=PT+Serif+Caption&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Irish+Grover&family=Julius+Sans+One&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Serif+Caption&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
@@ -16,89 +18,99 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-            <!-- Header -->
-            <section id="header">
-                <header>
-                    <h1>MOKESELL</h1>
-                    <h2>IN COLLABORATION WITH HOYOVERSE</h2>
-                </header>
-                <!-- Navigation -->
-                <nav>
-                    <ul id="navbar">
-                        <li><a href="index.html" class="active">HOME</a></li>
-                        <li><a href="browse.html">BROWSE</a></li>
-                        <li><a href="account.html">ACCOUNT</a></li>
-                        <li><a href="about.html">ABOUT</a></li>
-                        <li><a href="contact-us.html">CONTACT US</a></li>
-                    </ul>
-                    <div id="search">
-                        <p>Search...</p>
-                        <img src="images/search.png" alt="search icon">
-                    </div>
-                </nav>
-            </section>
+        <!-- Header -->
+        <section id="header">
+            <header>
+                <h1>MOKESELL</h1>
+                <h2>IN COLLABORATION WITH HOYOVERSE</h2>
+            </header>
+            <!-- Navigation -->
+            <nav>
+                <ul id="navbar">
+                    <li><a href="index.html" class="active">HOME</a></li>
+                    <li><a href="browse.html">BROWSE</a></li>
+                    <li><a href="account.html">ACCOUNT</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact-us.html">CONTACT US</a></li>
+                </ul>
+                <div id="search">
+                    <p>Search...</p>
+                    <img src="images/Icons/search.png" alt="search icon">
+                </div>
+            </nav>
+        </section>
             <link href="index.html">
             <!-- Product Details Page -->
             <section id="product-page">
                 <div class="product-container">
                     <div class="product-img">
-                        <img src="images/HSR Products/Small-Plush.webp" alt="honkai star rail chibi character plushies">
-                    </div>
-                    <div class="product-details">
-                        <h2>Honkai: Star Rail Chibi Character Plushie</h2>
-                        <h2>$49.99</h2>
-                        <p>Pick your favorite one among this first batch of 6 official character plushies from the Chibi Doll Series</p>
-                        <div class="button-container">
-                            <p>Select variant</p>
-                            <button>Blade</button>
-                            <button>Jing Liu</button>
-                            <button>Jing Yuan</button>
-                            <button>March 7th</button>
-                            <button>Dan Heng</button>
-                            <button>Dan Heng: Imbibitor Lunae</button>
-                            <p>Quantity</p>
-                            <button>1</button>
-                            <button>Add to Cart</button>
-                            <img src="" alt="Wishlist heart button">
+                    <button class="nav-button left" onclick="prevImage()">&#10094;</button>
+                    <img id="product-img" src="images/HSR Products/Small-Plush.webp" alt="Honkai Star Rail Plushie">
+                    <button class="nav-button right" onclick="nextImage()">&#10095;</button>
+                </div>
+                <div class="product-details">
+                    <h2>Honkai: Star Rail Chibi Character Plushie</h2>
+                    <h2>$49.99</h2>
+                    <p>Pick your favorite one among this first batch of 6 official character plushies from the Chibi Doll Series</p>
+                    <div class="options-container">
+                        <select id="character-select">
+                            <option value="" disabled selected>Choose an option</option>
+                            <option value="jl">Jing Liu</option>
+                            <option value="jy">Jing Yuan</option>
+                            <option value="blade">Blade</option>
+                            <option value="dhil">Danheng: Imbibitor Lunae</option>
+                        </select>
+                        <h4>Quantity:</h4>
+                        <div class="quantity-selector">
+                            <input type="number" id="quantity" value="1" min="1">
+                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="wishlist">
+                                <img src="" alt="Wishlist Button">
+                            </button>
                         </div>
                     </div>
                 </div>
-                 <!-- More Products -->
-                <section id="more-products">
-                    <h2>You may also like...</h2>
-                    <div class="product-container">
-                        <div class="pro">
-                            <img src="images/Genshin Products/Small-Plush.webp" alt="">
-                            <div class="des" data-game="Genshin Impact" data-category="Plushies">
-                                <span>Genshin Impact</span>
-                                <h5>Genshin Impact Small Character Plush</h5>
-                                <h4>$29.00</h4>
-                            </div>
-                        </div>
-                        <div class="pro">
-                            <img src="images/Genshin Products/Saurian-Plush.webp" alt="">
-                            <div class="des" data-game="Genshin Impact" data-category="Plushies">
-                                <span>Genshin Impact</span>
-                                <h5>Genshin Impact Baby Saurian Natlan Plushie</h5>
-                                <h4>$59.99</h4>
-                            </div>
-                        </div>
-                        <div class="pro">
-                            <img src="images/ZZZ Products/Zenless-Mousepad.webp" alt="">
-                            <div class="des" data-game="Zenless Zone Zero" data-category="Peripherals">
-                                <span>Zenless Zone Zero</span>
-                                <h5>Zenless Zone Zero Mousepad Peripheral</h5>
-                                <h4>$35.00</h4>
-                            </div>
-                        </div>
-                        <div class="pro">
-                            <img src="images/HI3 Products/Pin-Badge.webp" alt="">
-                            <div class="des" data-game="Honkai Impact 3" data-category="Badges/Pins">
-                                <span>Honkai Impact 3</span>
-                                <h5>Honkai Impact 3 Pin Badge</h5>
-                                <h4>$16.99</h4>
-                            </div>
+            </section>
+            <!-- More Products -->
+            <section id="more-products">
+                <h2>You may also like...</h2>
+                <div class="product-container">
+                    <div class="pro">
+                        <img src="images/Genshin Products/Small-Plush.webp" alt="">
+                        <div class="des" data-game="Genshin Impact" data-category="Plushies">
+                            <span>Genshin Impact</span>
+                            <h5>Genshin Impact Small Character Plush</h5>
+                            <h4>$29.00</h4>
                         </div>
                     </div>
-                </section>
+                    <div class="pro">
+                        <img src="images/Genshin Products/Saurian-Plush.webp" alt="">
+                        <div class="des" data-game="Genshin Impact" data-category="Plushies">
+                            <span>Genshin Impact</span>
+                            <h5>Genshin Impact Baby Saurian Natlan Plushie</h5>
+                            <h4>$59.99</h4>
+                        </div>
+                    </div>
+                    <div class="pro">
+                        <img src="images/ZZZ Products/Zenless-Mousepad.webp" alt="">
+                        <div class="des" data-game="Zenless Zone Zero" data-category="Peripherals">
+                            <span>Zenless Zone Zero</span>
+                            <h5>Zenless Zone Zero Mousepad Peripheral</h5>
+                            <h4>$35.00</h4>
+                        </div>
+                    </div>
+                </div>
             </section>
+            <section id="footer-container">
+                <footer class="foot">
+                    <img src="images/Logos/HoYoverse-Logo.png" alt="HoYoverse Logo">
+                    <h4>Copyright © COGNOSPHERE & MokeSell. All Rights Reserved.</h4>
+                </footer>
+            </section>
+        <!-- Scripts -->
+        <!-- ACCOUNT INFO SCRIPT -->
+        <script src="js/account-info.js"></script>
+        <!-- PRODUCT DETAILS (Missing filtering) -->
+        <script src="js/product-details.js"></script>
+    </body>
+</html>
