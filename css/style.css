@@ -261,10 +261,8 @@ form input[type="checkbox"] {
 
 /*------------------------------------------------------------------------*/
 /* LISTINGS SECTION */
-
-/* General padding for other sections */
 #listings h1 {
-    padding-left: 10px;
+    padding-left: 20px;
 }
 
 #listings h2 {
@@ -354,6 +352,74 @@ form input[type="checkbox"] {
     font-weight: bold;
     color: gray;
 }
+
+/*------------------------------------------------------------------------*/
+/* PRODUCT PAGE */
+#product-page {
+    padding-left: 20px;
+}
+
+.product-container {
+    padding: 50px 10px;
+    gap: 20px;
+    display: flex;
+}
+
+#product-page img { /* to do: adjust size according to screen, compatibility*/
+    border-radius: 20px;
+    width: 400px;
+}
+
+#more-products .product-container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Product Card */
+#more-products .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 15px; /* Increased padding for better spacing */
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+    background: white;
+    text-align: center;
+}
+
+#more-products .pro:hover {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+#more-products .pro img {
+    width: 100%;
+    height: 35vh;
+    border-radius: 20px;
+    object-fit: fill;
+}
+/* Text styles */
+#more-products .pro .des {
+    text-align: center;
+    padding: 10px 5px;
+}
+
+#more-products .pro .des span {
+    color: black;
+    font-size: 13px;
+    font-weight: 600;
+    display: block;
+}
+
+#more-products .pro .des h5 {
+    color: #222; /* Darkened for better readability */
+    font-size: 15px;
+    font-weight: bold;
+}
+
 
 /*------------------------------------------------------------------------*/
 /* ACCOUNT */
