@@ -417,6 +417,18 @@ form input[type="checkbox"] {
     justify-content: center;
 }
 
+.product-details h2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(128, 128, 248);
+    font-size: 3vh;
+}
+
+.product-details p {
+    font-size: 16px;
+    font-size: 2vh;
+}
+
 /* Navigation Buttons */
 .nav-button {
     position: absolute;
