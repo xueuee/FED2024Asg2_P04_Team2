@@ -67,7 +67,7 @@ body {
 /* NAVIGATION - need to add @media screen to 
                 ensure device compatibility */ 
 nav {
-    background-color: #dedcdc;
+    background: linear-gradient(110deg, rgb(175, 216, 248),rgb(172, 203, 236), rgb(154, 113, 220), rgb(236, 130, 238));
     padding-left: 35px;
     display: flex; 
     justify-content: space-between;
@@ -156,10 +156,12 @@ nav div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: lightgrey;
+    background: linear-gradient(110deg, rgb(185, 207, 239), rgb(195, 182, 239), rgb(205, 188, 236), rgb(185, 182, 227), rgb(177, 198, 227));
     margin: 150px;
     border-radius: 25px;
     height: 400px;
+    width: 500px;
+    align-self: center;
     text-align: center;
 }
 
@@ -207,7 +209,7 @@ nav div {
     max-width: 280px;
     display: flex;
     flex-direction: column;
-    background: #cfcfcf;
+    background: linear-gradient(110deg, rgb(164, 182, 211), rgb(192, 167, 214), rgb(187, 164, 198), rgb(169, 159, 194), rgb(151, 169, 198));
     margin-top: 14px;
 }
 
@@ -216,7 +218,7 @@ nav div {
     font-family: 'Kanit', sans-serif;
     font-size: 25px;
     font-weight: 300;
-    background: #dedcdc;
+    background: linear-gradient(110deg, rgb(175, 216, 248),rgb(172, 203, 236), rgb(154, 113, 220), rgb(236, 130, 238));
     padding: 2px 10px;
 }
 
