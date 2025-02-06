@@ -68,7 +68,7 @@ body {
                 ensure device compatibility */ 
 nav {
     background: linear-gradient(110deg, rgb(175, 216, 248),rgb(172, 203, 236), rgb(154, 113, 220), rgb(236, 130, 238));
-    padding-left: 35px;
+    padding-left: 10px 20px;
     display: flex; 
     justify-content: space-between;
     align-items: center;
@@ -303,6 +303,7 @@ form input[type="checkbox"] {
 #listings .pro {
     width: 23%;
     min-width: 250px;
+    height: 60vh;
     padding: 15px; /* Increased padding for better spacing */
     border: 1px solid #cce7d0;
     border-radius: 25px;
@@ -351,17 +352,6 @@ form input[type="checkbox"] {
     color: rgb(128, 128, 248);
 }
 
-#listings .pro .cart {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 50px;
-    background-color: white;
-    font-weight: 500;
-    color: #088178;
-    border: 1px solid #cce7d0;
-}
-
 /* Product Container Adjustments */
 .pro-container {
     display: flex;
@@ -377,16 +367,12 @@ form input[type="checkbox"] {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 60vh; /* Adjust as needed */
+    min-width: 250px; /* Adjust as needed */
+    width: 23%;
     font-size: 18px;
     font-weight: bold;
     color: gray;
     text-align: center;
-}
-
-.pro-container:has(.pro:only-child) {
-    display: flex;
-    justify-content: center;
 }
 
 .pro-container p {
@@ -479,17 +465,33 @@ form input[type="checkbox"] {
     background: rgba(0, 0, 0, 0.8);
 }
 
-/* Product Card */
+/* Product Card Section */
+#more-products {
+    margin-top: 30px;
+    text-align: left;
+    padding-left: 30px;
+}
+
+#more-products h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* Product Container */
 #more-products .product-container {
     display: flex;
     align-items: center;  /* Ensures vertical alignment */
     justify-content: center;
-    gap: 40px;  /* Adds spacing between image and details */
+    gap: 60px;  /* Adds spacing between image and details */
+    padding: 20px 10px;
 }
 
+/* Individual Product Card */
 #more-products .pro {
     width: 23%;
     min-width: 250px;
+    height: 60vh;
     padding: 15px; /* Increased padding for better spacing */
     border: 1px solid #cce7d0;
     border-radius: 25px;
@@ -501,11 +503,13 @@ form input[type="checkbox"] {
     text-align: center;
 }
 
+/* Hover Effect */
 #more-products .pro:hover {
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
     transform: scale(1.05); /* Slight scale effect on hover */
 }
 
+/* Product Image */
 #more-products .pro img {
     width: 100%;
     height: 35vh;
@@ -513,11 +517,7 @@ form input[type="checkbox"] {
     object-fit: fill;
 }
 
-/* Text styles */
-#more-products h2 {
-    padding: 0 15px;
-}
-
+/* Product Text */
 #more-products .pro .des {
     text-align: center;
     padding: 10px 5px;
@@ -540,17 +540,6 @@ form input[type="checkbox"] {
     font-size: 16px;
     font-weight: bold;
     color: rgb(128, 128, 248);
-}
-
-#more-products .pro .cart {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 50px;
-    background-color: white;
-    font-weight: 500;
-    color: #088178;
-    border: 1px solid #cce7d0;
 }
 
 /*------------------------------------------------------------------------*/
