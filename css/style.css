@@ -82,7 +82,7 @@ nav {
     justify-content: center;
     align-items: center;
     margin-top: 15px;
-    padding: 0;
+    padding: 0 0 0 45px; /* Only left padding */
     gap: 50px;
     list-style: none;
     flex-grow: 0;
@@ -112,7 +112,7 @@ nav {
 #navbar li a.active::after {
     content: ""; /* Empty pseudo-element */
     display: block;
-    width: 0; /* Start with no width */
+    width: 0;
     height: 2px; /* Thickness of the underline */
     background-color: #b1aaff;
     position: absolute; 
@@ -132,7 +132,7 @@ nav {
     display: flex;
     justify-content: space-between;
     gap: 24px; 
-    padding-left: 18%; 
+    padding-left: 29%; 
 }
 
 #icons a, #icons i {
