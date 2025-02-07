@@ -602,9 +602,10 @@ form input[type="checkbox"] {
 }
 
 .user-profile-pic img{
-    border-radius: 100px;
+    border-radius: 150px;
     width: 200px;
     height: auto;
+    padding: 10px 15px;
 }
 
 /* Active Codes */
@@ -633,15 +634,114 @@ form input[type="checkbox"] {
 }
 
 .check-in-items {
+    background-color: #d2e1fa;
     display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-content: center;
-    padding: 15px 15px;
-    background: lightgrey;
+    justify-content: space-evenly; /* Even spacing */
+    align-items: center;
+    padding: 15px;
+}
+
+/* Style each check-in item */
+.check-in-item {
+    text-align: center; /* Centers text below images */
+    flex: 1; /* Makes all items flexible */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.check-in-item p {
+    font-weight: bold;
+}
+
+/* Make Day 7 wider */
+.check-in-item:last-child {
+    flex: 1.5; /* Day 7 is 1.5x wider */
+}
+
+/* Image styling */
+.check-in-item img {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Hover effect */
+.check-in-item:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Checked-in effect */
+.checked-in {
+    opacity: 0.5;
+    filter: grayscale(100%);
+    pointer-events: none; /* Prevents re-clicking */
+}
+
+/* Pop-up Message Styling */
+.popup-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: lightgray;
+    color: black;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Fade-out animation */
+.popup-message.fade-out {
+    opacity: 0;
 }
 
 /* Other Options */
+#other-options-container {
+    display: flex;
+    justify-content: center; /* Centers the options */
+    gap: 80px; /* Adjusts spacing between items */
+    margin-top: 20px;
+    padding: 30px;
+}
+
+.option {
+    display: flex;
+    flex-direction: column; /* Ensures text is below the icon */
+    align-items: center; /* Centers icon and text */
+    text-align: center;
+}
+
+.option a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px; /* Adjust size */
+    height: 100px;
+    border-radius: 50%;
+    background-color: #f1edf2;
+    text-decoration: none;
+    font-size: 40px;
+    color: #e6bdf2;
+}
+
+.option p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+
+/* Hover effect */
+.option a:hover {
+    background-color: #ccc; /* Slightly darker gray */
+    color: black;
+}
 
 /*------------------------------------------------------------------------*/
 /* ABOUT */

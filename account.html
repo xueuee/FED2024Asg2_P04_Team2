@@ -51,13 +51,13 @@
                     You have no new notifications.
                 </div>
             </div>
-        <!-- Profile -->
-        <section id="profile">
-            <div id="profile-n-codes">
-                <div id="profile-container">
-                    <div class="user-profile-pic">
-                        <img src="images/Genshin-Impact-Logo.png" alt="User's profile picture">
-                    </div>
+            <!-- Profile -->
+            <section id="profile">
+                <div id="profile-n-codes">
+                    <div id="profile-container">
+                        <div class="user-profile-pic">
+                            <img src="images/Logos/Genshin-Impact-Logo.png" alt="User's profile picture">
+                        </div>
                     <div class="user-info">
                         <h1 class="loggedInUser">Guest</h1>
                         <p>Account age: 0 days</p>
@@ -83,63 +83,67 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
             <br>
             <!-- Daily Check-In -->
             <div id="check-in-container">
                 <h2>Daily check-in</h2>  
+                <p id="check-in-status">Check in daily to claim rewards!</p>
                 <div class="check-in-items">
-                    <div class="check-in-item">
-                        <img src="TBA">
+                    <div class="check-in-item" id="day-1">
+                        <img src="images/Icons/Mora.webp" data-day="1">
                         <p>Day 1</p>
                     </div>
-                    <div class="check-in-item">
-                        <img src="TBA">
+                    <div class="check-in-item" id="day-2">
+                        <img src="images/Icons/Experience.webp" data-day="2">
                         <p>Day 2</p>
                     </div>
-                    <div class="check-in-item">
-                        <img src="TBA">
+                    <div class="check-in-item" id="day-3">
+                        <img src="images/Icons/Primogem.webp" data-day="3">
                         <p>Day 3</p>
                     </div>
-                    <div class="check-in-item">
-                        <img src="TBA">
+                    <div class="check-in-item" id="day-4">
+                        <img src="images/Icons/Mora.webp" data-day="4">
                         <p>Day 4</p>
                     </div>
-                    <div class="check-in-item">
-                        <img src="TBA">
+                    <div class="check-in-item" id="day-5">
+                        <img src="images/Icons/Experience.webp" data-day="5">
                         <p>Day 5</p>
                     </div>
-                    <div class="check-in-item">
-                        <img src="TBA">
+                    <div class="check-in-item" id="day-6">
+                        <img src="images/Icons/Mora.webp" data-day="6">
                         <p>Day 6</p>
+                    </div>
+                    <div class="check-in-item" id="day-7">
+                        <img src="images/Icons/Primogem.webp" data-day="7">
+                        <p>Day 7</p>
                     </div>
                 </div>
             </div>
             <!-- Other Options -->
-            <div id="other-options-conatiner">
-                <div>
-                    <img src="TBA" alt="Heart wishlist icon">
+            <div id="other-options-container">
+                <div class="option">
+                    <a href="#"><i class="fa-solid fa-heart"></i></a>
                     <p>Wishlist</p>
                 </div>
-                <div>
-                    <img src="TBA" alt="Orders icon">
+                <div class="option">
+                    <a href="#"><i class="fa-solid fa-clock"></i></a>
                     <p>Orders</p>
                 </div>
-                <div>
-                    <img src="TBA" alt="Star ratings icon">
+                <div class="option">
+                    <a href="#"><i class="fa-solid fa-star"></i></a>
                     <p>Ratings</p>
                 </div>
             </div>
         </section>
         <section id="footer-container">
             <footer class="foot">
-                <img src="images/HoYoverse-Logo.png" alt="HoYoverse Logo">
+                <img src="images/Logos/HoYoverse-Logo.png" alt="HoYoverse Logo">
                 <h4>Copyright © COGNOSPHERE & MokeSell. All Rights Reserved.</h4>
             </footer>
         </section>
         <!-- Scripts -->
         <script src="js/account-info.js"></script>
-        <!-- NOTIFICATION POP UP -->
-        <script src="js/notification.js"></script>
+        <script src="js/check-in.js"></script>
     </body>
 </html>
