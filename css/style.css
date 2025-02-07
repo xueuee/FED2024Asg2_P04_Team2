@@ -565,9 +565,10 @@ form input[type="checkbox"] {
 }
 
 .user-profile-pic img{
-    border-radius: 100px;
+    border-radius: 150px;
     width: 200px;
     height: auto;
+    padding: 10px 15px;
 }
 
 /* Active Codes */
@@ -596,12 +597,71 @@ form input[type="checkbox"] {
 }
 
 .check-in-items {
+    background-color: #d2e1fa;
     display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-content: center;
-    padding: 15px 15px;
-    background: lightgrey;
+    justify-content: space-evenly; /* Even spacing */
+    align-items: center;
+    padding: 15px;
+}
+
+/* Style each check-in item */
+.check-in-item {
+    text-align: center; /* Centers text below images */
+    flex: 1; /* Makes all items flexible */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.check-in-item p {
+    font-weight: bold;
+}
+
+/* Make Day 7 wider */
+.check-in-item:last-child {
+    flex: 1.5; /* Day 7 is 1.5x wider */
+}
+
+/* Image styling */
+.check-in-item img {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Hover effect */
+.check-in-item:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Checked-in effect */
+.checked-in {
+    opacity: 0.5;
+    filter: grayscale(100%);
+    pointer-events: none; /* Prevents re-clicking */
+}
+
+/* Pop-up Message Styling */
+.popup-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: lightgray;
+    color: black;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Fade-out animation */
+.popup-message.fade-out {
+    opacity: 0;
 }
 
 /* Other Options */
