@@ -479,33 +479,6 @@ nav #search {
     font-size: 2vh;
 }
 
-/* Navigation Buttons */
-.nav-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: lightgray;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 20px;
-    border-radius: 50%;
-    z-index: 10;
-}
-
-.nav-button.left {
-    left: 10px;
-}
-
-.nav-button.right {
-    right: 10px;
-}
-
-.nav-button:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
-
 /* Product Card Section */
 #more-products {
     margin-top: 30px;
