@@ -43,7 +43,7 @@
                     </ul>
                     <div id="icons">
                         <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                        <i class="fa-solid fa-bell"></i>
+                        <i class="fa-solid fa-bell" id="notificationBell"></i>
                     </div>
                     <div id="search">
                         <p>Search...</p>
@@ -51,6 +51,14 @@
                     </div>
                 </nav>
             </section>
+            <div id="notificationPopup">
+                <div id="popupHeader">
+                    <strong>Notifications (0)</strong>
+                </div>
+                <div id="popupContent">
+                    You have no new notifications.
+                </div>
+            </div>
              <!-- Filter & Listings -->
             <section id="filter">
                 <!-- Left Sidebar Filter -->
@@ -224,5 +232,7 @@
         <!-- PRODUCT FILTERING & DETAILS -->
         <script src="js/filter.js" defer></script>
         <script src="js/product-details.js"></script>
+        <!-- NOTIFICATION POP UP -->
+        <script src="js/notification.js"></script>
     </body>
 </html>
