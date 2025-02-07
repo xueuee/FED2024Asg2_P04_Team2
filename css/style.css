@@ -733,27 +733,54 @@ form input[type="checkbox"] {
 
 /*------------------------------------------------------------------------*/
 /* CONTACT US */
-#chat-container {
+/* CONTACT US - AI Chatbot */
+#chatbot-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto; /* Centers it */
+    text-align: center;
+}
+
+#chatbot {
+    width: 100%;
+    height: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 20px;
-    margin: 20px;
-    background: lightgrey;
+    padding: 10px;
 }
 
-.ai-response {
-    background: grey;
-    border-radius: 10px;
+#chatbox {
+    height: 350px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: left;
 }
 
-.user-response {
-    background: rgb(175, 175, 175);
-    border-radius: 10px;
+#userInput {
+    width: 96%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-.ai-response p, .user-response p {
-    padding: 5px 15px;
+button {
+    padding: 10px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #0056b3;
 }
 
 /*------------------------------------------------------------------------*/
