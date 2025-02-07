@@ -265,11 +265,10 @@ nav #search {
     margin-top: 14px;
 }
 
+/*
 @media screen and (max-width: 1306px) {
-    #left-sidebar {
-        margin-top: 27px;
-    }
-}
+    TBA
+} */
 
 /* Filter by games */
 #left-sidebar h2 {
@@ -745,6 +744,7 @@ form input[type="checkbox"] {
 
 /*------------------------------------------------------------------------*/
 /* ABOUT */
+/* FAQ Section */
 #faq {
     padding: 5px 15px;
 }
@@ -755,12 +755,31 @@ form input[type="checkbox"] {
 }
 
 .faq-questions {
-    padding: 15px;
+    padding: 18px;
     margin: 5px -40px;
     width: 100%;
+    border-radius: 8px;
     background: rgb(193, 193, 193);
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
+.faq-questions:hover {
+    background-color: rgb(173, 173, 173);
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    border-radius: 0 0 8px 8px;
+    background: rgb(220, 220, 220);
+    margin: 5px -40px;
+    margin-top: -8px;
+    width: calc(100% + 6px);
+}
+
+/* DEALS */
 #deals {
     display: flex;
     flex-direction: column;
