@@ -665,6 +665,46 @@ form input[type="checkbox"] {
 }
 
 /* Other Options */
+#other-options-container {
+    display: flex;
+    justify-content: center; /* Centers the options */
+    gap: 80px; /* Adjusts spacing between items */
+    margin-top: 20px;
+    padding: 30px;
+}
+
+.option {
+    display: flex;
+    flex-direction: column; /* Ensures text is below the icon */
+    align-items: center; /* Centers icon and text */
+    text-align: center;
+}
+
+.option a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px; /* Adjust size */
+    height: 100px;
+    border-radius: 50%;
+    background-color: #f1edf2;
+    text-decoration: none;
+    font-size: 40px;
+    color: #e6bdf2;
+}
+
+.option p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+
+/* Hover effect */
+.option a:hover {
+    background-color: #ccc; /* Slightly darker gray */
+    color: black;
+}
 
 /*------------------------------------------------------------------------*/
 /* ABOUT */
