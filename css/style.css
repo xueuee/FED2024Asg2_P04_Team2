@@ -127,18 +127,55 @@ nav {
     width: 100%; /* Underline grows to full width */
 }
 
-/* Notification bell and cart icons */
+/* Notification bell & cart icons */
 #icons {
     display: flex;
     justify-content: space-between;
-    gap: 20px; 
-    padding-right: 10px;
-    padding-left: 10%; 
+    gap: 24px; 
+    padding-left: 18%; 
 }
 
 #icons a, #icons i {
     font-size: 20px; 
     color: black;
+}
+
+/* Notification bell pop up */
+#notificationPopup {
+    display: none;
+    position: absolute;
+    top: 165px;
+    right: 120px; 
+    width: 250px;
+    height: 150px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+}
+
+#popupHeader {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#popupContent {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 14px;
+    color: #777;
+}
+
+#icons i {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#notificationBell.active {
+    color: #b1aaff;
 }
 
 /*Search bar*/
@@ -228,7 +265,7 @@ nav #search {
     margin-top: 14px;
 }
 
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1306px) {
     #left-sidebar {
         margin-top: 27px;
     }
