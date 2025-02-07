@@ -1,9 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Get the product ID from the URL
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get("id");
 
-    // Product database
     const products = {
         "hsr-small-plush": {
             id: "hsr-small-plush",
@@ -116,24 +114,19 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     if (!productId || !products[productId]) {
-        // Handle missing or invalid product ID
-        console.error("Product not found:", productId);
         document.getElementById("product-title").textContent = "Product Not Found";
         document.getElementById("product-description").textContent =
             "The product you are looking for does not exist.";
         return;
     }
 
-    // Display product details
     const product = products[productId];
     document.getElementById("product-title").textContent = product.name;
     document.getElementById("product-price").textContent = `$${product.price}`;
-    const img = document.getElementById("product-img");
-    img.src = product.image;
-    img.alt = product.name;
+    document.getElementById("product-img").src = product.image;
+    document.getElementById("product-img").alt = product.name;
     document.getElementById("product-description").textContent = product.description;
 
-    // Populate variants if available
     const variantSelect = document.getElementById("variant-select");
     if (product.variants.length > 0) {
         variantSelect.style.display = "block";
@@ -144,8 +137,6 @@ document.addEventListener("DOMContentLoaded", function () {
             option.textContent = variant;
             variantSelect.appendChild(option);
         });
-    } else {
-        variantSelect.style.display = "none";
     }
 
     // Display recommended products
@@ -197,5 +188,40 @@ document.addEventListener("DOMContentLoaded", function () {
             container.innerHTML += productHTML;
         });
     }
+    
+    // Add to Cart Functionality
+    document.querySelector(".add-to-cart").addEventListener("click", function () {
+        const quantity = parseInt(document.getElementById("quantity").value);
+        const selectedVariant = variantSelect.value || "Default";
+        
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let existingItem = cart.find(item => item.id === product.id && item.variant === selectedVariant);
+
+        if (existingItem) {
+            existingItem.quantity += quantity;
+        } else {
+            cart.push({
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                image: product.image,
+                variant: selectedVariant,
+                quantity: quantity
+            });
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartCount();
+        alert("Item added to cart!");
+    });
+
+    function updateCartCount() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+        document.querySelector("#icons a i").setAttribute("data-count", totalCount);
+    }
+
+    updateCartCount();
 });
+
 
