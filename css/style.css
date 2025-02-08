@@ -68,7 +68,6 @@ body {
                 ensure device compatibility */ 
 nav {
     background: linear-gradient(110deg, rgb(166, 205, 249), rgb(154, 113, 220), rgb(236, 130, 238));
-    padding-left: 10px 20px;
     display: flex; 
     justify-content: space-between;
     align-items: center;
@@ -82,7 +81,7 @@ nav {
     justify-content: center;
     align-items: center;
     margin-top: 15px;
-    padding: 0 0 0 45px; /* Only left padding */
+    padding-left: 45px;
     gap: 50px;
     list-style: none;
     flex-grow: 0;
@@ -131,8 +130,9 @@ nav {
 #icons {
     display: flex;
     justify-content: space-between;
-    gap: 24px; 
-    padding-left: 29%; 
+    gap: 20px; 
+    margin-left: auto; /* Push icons to the right */
+    padding-left: 0;
 }
 
 #icons a, #icons i {
@@ -384,7 +384,8 @@ nav #search {
 #listings .pro {
     width: 23%;
     min-width: 250px;
-    height: 60vh;
+    height: 50%;
+    max-height: 500px;
     padding: 15px; /* Increased padding for better spacing */
     border: 1px solid #cce7d0;
     border-radius: 25px;
@@ -403,7 +404,7 @@ nav #search {
 
 #listings .pro img {
     width: 100%;
-    height: 35vh;
+    min-height: 35vh;
     border-radius: 20px;
     object-fit: fill;
 }
