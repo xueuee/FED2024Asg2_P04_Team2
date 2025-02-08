@@ -1123,6 +1123,60 @@ nav #search {
 .billing-details-container h3 + label {
     margin-top: 20px;
 }
+
+/*------------------------------------------------------------------------*/
+/* ORDER CONFIRMATION */
+#order-confirmation {
+    text-align: center;
+    padding: 50px 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+#order-confirmation h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.order-confirmed-container {
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    max-width: 500px;
+    width: 100%;
+}
+
+.order-confirmed-container p {
+    font-size: 1.2rem;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+.order-confirmed-container a {
+    text-decoration: none;
+}
+
+.order-confirmed-container button {
+    background-color: #3498db;
+    color: white;
+    font-size: 1.2rem;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    margin: 15px auto 0;
+}
+
+.order-confirmed-container button:hover {
+    background-color: #2980b9;
+}
+
 /*------------------------------------------------------------------------*/
 /* FOOTER */
 
