@@ -140,6 +140,10 @@ nav {
     color: black;
 }
 
+#icons a:hover, #icons i:hover {
+    color: rgb(175, 216, 248)
+}
+
 /* Notification bell pop up */
 #notificationPopup {
     display: none;
@@ -175,7 +179,7 @@ nav {
 }
 
 #notificationBell.active {
-    color: #b1aaff;
+    color: rgb(175, 216, 248);
 }
 
 /*Search bar*/
@@ -676,24 +680,17 @@ nav #search {
 
 /*------------------------------------------------------------------------*/
 /* ACCOUNT */
-#profile-container {
-    padding: 10px 15px;
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-}
-
 #profile-n-codes {
     margin: 20px;
     display: flex;
     flex-direction: row;
-    gap: 20%;
 }
 
-@media screen and (max-width: 1450px) {
-    #profile-n-codes {
-        margin-top: 30px;
-    }
+#profile-container {
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .user-profile-pic img{
@@ -703,17 +700,37 @@ nav #search {
     padding: 10px 15px;
 }
 
+/* Logout button */
+#profile-n-codes button {
+    background-color: #b1aaff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 35px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#profile-n-codes button:hover {
+    background-color: rgb(175, 216, 248)
+}
+
 /* Active Codes */
 .code-box {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: lightgrey;
+    background-color: rgb(199, 211, 220);
 }
 
 .code-button {
-    background-color: grey;
+    background-color: rgb(135, 146, 199);
+    border-radius: 5px;
     padding: 1px 15px;
     margin: 15px;
     min-width: 40%;
@@ -721,7 +738,9 @@ nav #search {
 }
 
 /*
-@media screen and (max-width: 800px) { /* 500px for mobile? */
+@media screen and (max-width: 800px) 
+@media screen and (max-width: 1000px) {
+}*/
 
 /* Daily Check-in */
 #check-in-container {
