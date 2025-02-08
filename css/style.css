@@ -684,6 +684,9 @@ nav #search {
     margin: 20px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between; /* Ensures space between the profile and codes containers */
+    width: 100%;
+    gap: 50px;
 }
 
 #profile-container {
@@ -693,6 +696,33 @@ nav #search {
     align-items: center;
 }
 
+/* Active Codes */
+#codes-container {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin-right: 40px;
+}
+
+.code-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 25px 25px;
+    background-color: rgb(199, 211, 220);
+}
+
+.code-button {
+    background-color: rgb(135, 146, 199);
+    border-radius: 5px;
+    padding: 1px 12px;
+    text-align: center;
+    width: calc(50% - 10px); 
+    box-sizing: border-box; /* Include padding and margin in the width calculation */
+}
+
+/* User Profile Picture */
 .user-profile-pic img{
     border-radius: 150px;
     width: 200px;
@@ -701,7 +731,7 @@ nav #search {
 }
 
 /* Logout button */
-#profile-n-codes button {
+#profile-container button {
     background-color: #b1aaff;
     border: none;
     border-radius: 10px;
@@ -717,24 +747,6 @@ nav #search {
 
 #profile-n-codes button:hover {
     background-color: rgb(175, 216, 248)
-}
-
-/* Active Codes */
-.code-box {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: rgb(199, 211, 220);
-}
-
-.code-button {
-    background-color: rgb(135, 146, 199);
-    border-radius: 5px;
-    padding: 1px 15px;
-    margin: 15px;
-    min-width: 40%;
-    text-align: center;
 }
 
 /*
