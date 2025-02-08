@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateCheckoutDisplay() {
         const cart = getCart();
-        orderItemsContainer.innerHTML = "";
+        orderItemsContainer.innerHTML = ""; // Clear previous items
 
         if (cart.length === 0) {
             orderItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
@@ -26,7 +26,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const orderItem = document.createElement("div");
             orderItem.classList.add("order-item");
-            orderItem.innerHTML = `<p>x${item.quantity} ${item.name} - ${item.variant || "Default"} - $${itemTotal.toFixed(2)}</p>`;
+            orderItem.innerHTML = `
+                <div class="order-item-details">
+                    <p><strong>${item.name}</strong> (${item.variant || "Default"})</p>
+                </div>
+                <p>Qty: ${item.quantity}</p>
+                <p>$${itemTotal.toFixed(2)}</p>
+            `;
             orderItemsContainer.appendChild(orderItem);
         });
 
@@ -42,4 +48,5 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = "browse.html";
     });
 });
+
 
