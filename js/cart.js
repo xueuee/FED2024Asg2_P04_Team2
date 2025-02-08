@@ -1,18 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
     const cartContainer = document.getElementById("cart-items");
+    const totalElement = document.getElementById("total");
+    const checkoutButton = document.getElementById("checkout");
 
-    // Function to retrieve cart data from local storage
     function getCart() {
         return JSON.parse(localStorage.getItem("cart")) || [];
     }
 
-    // Ensure variant selection is displayed in the cart
     function updateCartDisplay() {
         const cart = getCart();
         cartContainer.innerHTML = "";
 
         if (cart.length === 0) {
             cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+            totalElement.textContent = "$0.00";
             return;
         }
 
@@ -20,36 +21,37 @@ document.addEventListener("DOMContentLoaded", function () {
             const cartItem = document.createElement("div");
             cartItem.classList.add("cart-item");
             cartItem.innerHTML = `
-                <img src="${item.image}" alt="${item.name}" width="50">
-                <p>${item.name} (${item.variant || "No Variant"})</p>
-                <p>Quantity: <input type="number" value="${item.quantity}" min="1" data-index="${index}"></p>
-                <p>$${(item.price * item.quantity).toFixed(2)}</p>
-                <button class="remove-item" data-index="${index}">Remove</button>
+                <img src="${item.image}" alt="${item.name}" width="60">
+                <div class="cart-details">
+                    <p>${item.name} <br> <small>Variant: ${item.variant || "Default"}</small></p>
+                    <p>Quantity: 
+                        <input type="number" value="${item.quantity}" min="1" data-index="${index}">
+                    </p>
+                    <p>$${(item.price * item.quantity).toFixed(2)}</p>
+                    <button class="remove-item" data-index="${index}">Remove</button>
+                </div>
             `;
             cartContainer.appendChild(cartItem);
         });
 
         attachEventListeners();
+        updateTotal();
     }
 
-    // Function to attach event listeners to cart item inputs and buttons
     function attachEventListeners() {
         document.querySelectorAll(".remove-item").forEach(button => {
             button.addEventListener("click", function () {
-                const index = this.getAttribute("data-index");
-                removeFromCart(index);
+                removeFromCart(this.getAttribute("data-index"));
             });
         });
 
         document.querySelectorAll('input[type="number"]').forEach(input => {
             input.addEventListener("change", function () {
-                const index = this.getAttribute("data-index");
-                updateQuantity(index, this.value);
+                updateQuantity(this.getAttribute("data-index"), this.value);
             });
         });
     }
 
-    // Function to remove item from cart
     function removeFromCart(index) {
         let cart = getCart();
         cart.splice(index, 1);
@@ -57,7 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
         updateCartDisplay();
     }
 
-    // Function to update item quantity
     function updateQuantity(index, quantity) {
         let cart = getCart();
         if (quantity < 1) return;
@@ -66,5 +67,23 @@ document.addEventListener("DOMContentLoaded", function () {
         updateCartDisplay();
     }
 
+    function updateTotal() {
+        let cart = getCart();
+        let total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+        totalElement.textContent = `$${total.toFixed(2)}`;
+    }
+
+    checkoutButton.addEventListener("click", function () {
+        if (getCart().length === 0) {
+            alert("Your cart is empty.");
+        } else {
+            alert("Proceeding to checkout...");
+            localStorage.removeItem("cart"); // Clear cart after checkout
+            updateCartDisplay();
+            window.location.href = "checkout.html"; // Redirect to checkout page
+        }
+    });
+
     updateCartDisplay();
 });
+
