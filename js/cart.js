@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const cartContainer = document.getElementById("cart-items");
-    const subtotalElement = document.getElementById("subtotal");
     const totalElement = document.getElementById("total");
+    const checkoutButton = document.getElementById("checkout");
 
     function getCart() {
         return JSON.parse(localStorage.getItem("cart")) || [];
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (cart.length === 0) {
             cartContainer.innerHTML = "<p>Your cart is empty.</p>";
-            updateTotal();
+            totalElement.textContent = "$0.00";
             return;
         }
 
@@ -69,21 +69,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateTotal() {
         let cart = getCart();
-        let subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-        let total = subtotal;  // No shipping fee added
-
-        subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
+        let total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
         totalElement.textContent = `$${total.toFixed(2)}`;
     }
 
-    document.getElementById("checkout").addEventListener("click", function () {
+    checkoutButton.addEventListener("click", function () {
         if (getCart().length === 0) {
             alert("Your cart is empty.");
         } else {
             alert("Proceeding to checkout...");
-            // Implement checkout functionality here
+            localStorage.removeItem("cart"); // Clear cart after checkout
+            updateCartDisplay();
+            window.location.href = "checkout.html"; // Redirect to checkout page
         }
     });
 
     updateCartDisplay();
 });
+
