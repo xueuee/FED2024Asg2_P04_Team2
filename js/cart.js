@@ -76,14 +76,12 @@ document.addEventListener("DOMContentLoaded", function () {
     checkoutButton.addEventListener("click", function () {
         if (getCart().length === 0) {
             alert("Your cart is empty.");
-        } else {
-            alert("Proceeding to checkout...");
-            localStorage.removeItem("cart"); // Clear cart after checkout
-            updateCartDisplay();
-            window.location.href = "checkout.html"; // Redirect to checkout page
+            return;
         }
+        window.location.href = "checkout.html"; // Redirect to checkout page
     });
 
     updateCartDisplay();
 });
+
 
