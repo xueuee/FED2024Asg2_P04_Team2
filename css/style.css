@@ -609,8 +609,17 @@ nav #search {
     font-size: 1rem;
 }
 
+.quantity-selector #quantity {
+    width: 10%;
+    min-width: 25px;
+    background-color: white;
+    border: 2px solid lightgray;
+    padding: 10px 15px;
+    border-radius: 5px; 
+}
+
 .add-to-cart {
-    background-color: #3498db;
+    background-color: rgb(236, 130, 238);
     color: white;
     border: none;
     padding: 10px 15px;
@@ -620,7 +629,7 @@ nav #search {
 }
 
 .add-to-cart:hover {
-    background-color: #2980b9;
+    background-color: #b1aaff;
 }
 
 .error-message {
@@ -936,6 +945,10 @@ nav #search {
     padding: 5px 15px;
 }
 
+#faq h1 {
+    font-size: 2.5rem;
+}
+
 #faq li {
     list-style: none;
     padding: 0 5px;
@@ -1012,7 +1025,6 @@ nav #search {
 
 #checkout-page h1 {
     font-size: 2.5rem;
-    color: #2c3e50;
     margin-bottom: 20px;
 }
 
