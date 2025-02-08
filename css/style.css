@@ -619,16 +619,6 @@ nav #search {
     transition: 0.3s;
 }
 
-.wishlist {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
 .add-to-cart:hover {
     background-color: #2980b9;
 }
