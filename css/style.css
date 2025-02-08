@@ -605,7 +605,6 @@ nav #search {
 
 /*------------------------------------------------------------------------*/
 /* Cart Section */
-/* Cart Section Enhancements */
 #Cart {
     background: white;
     padding: 30px;
@@ -622,25 +621,19 @@ nav #search {
 }
 
 #cart-container {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     margin-top: 20px;
     border-top: 2px solid #ecf0f1;
 }
 
-#cart-container div {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    align-items: center;
-}
-
 .cart-item {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 15px 0;
+    padding: 15px;
     border-bottom: 1px solid #ecf0f1;
-    text-align: center;
+    justify-content: space-between;
 }
 
 .cart-item img {
@@ -649,15 +642,18 @@ nav #search {
     border-radius: 5px;
 }
 
-.cart-item p {
+.cart-details {
     flex: 1;
-    margin: 0;
-    font-weight: bold;
-    color: #2c3e50;
+    margin-left: 15px;
+    text-align: left;
+}
+
+.cart-details p {
+    margin: 5px 0;
 }
 
 .cart-item input {
-    width: 60px;
+    width: 50px;
     text-align: center;
     border: 1px solid #bdc3c7;
     padding: 5px;
@@ -676,6 +672,47 @@ nav #search {
 
 .cart-item button:hover {
     background-color: #c0392b;
+}
+
+#cart-summary {
+    margin-top: 20px;
+    padding: 20px;
+    background: #ecf0f1;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#cart-summary input {
+    padding: 8px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+}
+
+#cart-summary button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cart-summary button:hover {
+    background: #2980b9;
+}
+
+#checkout {
+    margin-top: 10px;
+    background: #2ecc71;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#checkout:hover {
+    background: #27ae60;
 }
 
 /*------------------------------------------------------------------------*/
