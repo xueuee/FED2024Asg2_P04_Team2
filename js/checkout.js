@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("place-order-button").addEventListener("click", function () {
         alert("Order placed successfully!");
         localStorage.removeItem("cart"); // Clear cart after order is placed
-        window.location.href = "browse.html";
+        window.location.href = "order-confirmation.html";
     });
 });
 
