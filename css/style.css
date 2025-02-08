@@ -945,6 +945,94 @@ nav #search {
 }
 
 /*------------------------------------------------------------------------*/
+/* CHECKOUT */
+/* To align the containers side by side */
+#billing-n-order {
+    display: flex;
+    justify-content: space-between;
+    gap: 2%;
+    width: 100%;
+}
+
+/* Billing Details styling */
+.billing-details-container {
+    width: 48%; /* Adjust the width for the left side */
+    display: flex;
+    flex-direction: column;
+}
+
+.billing-details-container label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.billing-details-container input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Order container styling */
+.order-container {
+    width: 48%; /* Adjust the width for the right side */
+    display: flex;
+    flex-direction: column;
+}
+
+.order-item p {
+    margin: 5px 0;
+}
+
+.promo-code {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.promo-code input {
+    width: 70%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.order-prices-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.order-prices-container .label p {
+    margin: 0;
+}
+
+.order-prices-container .prices p,
+.order-prices-container h3 {
+    text-align: right;
+    margin: 0;
+}
+
+/* Promo code & Place Order Button */
+.order-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.order-container button:hover {
+    background-color: #b1aaff;
+}
+
+/* Styling for Payment Methods section */
+.billing-details-container h3 + label {
+    margin-top: 20px;
+}
+/*------------------------------------------------------------------------*/
 /* FOOTER */
 
 #footer-container {
