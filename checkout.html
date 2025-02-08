@@ -50,72 +50,76 @@
                     You have no new notifications.
                 </div>
             </div>
-            <!-- Cart -->
-        <section id="checkout-page">
-            <h1>Checkout</h1>
-            <div id="billing-n-order">
-                <div class="billing-details-container">
-                    <h3>Billing Details</h3>
-                    <!-- Billing Details Section -->
-                    <form id="billing-details-form">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-
-                        <label for="first-name">First Name</label>
-                        <input type="text" id="first-name" name="first-name" required>
-                
-                        <label for="last-name">Last Name</label>
-                        <input type="text" id="last-name" name="last-name" required>
-                
-                        <label for="country">Country</label>
-                        <input type="text" id="country" name="country" required>
-                
-                        <label for="address">Address</label>
-                        <input type="text" id="address" name="address" required>
-                
-                        <label for="postal-code">Postal Code / ZIP</label>
-                        <input type="text" id="postal-code" name="postal-code" required>
-                
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </form>
-                    <!-- Payment Methods Section -->
-                    <h3>Payment Method</h3>
-                    <label for="credit-card">
-                        <input type="radio" id="credit-card" name="payment-method" value="credit-card" required>
-                        Credit / Debit Card
-                    </label>
-                    <label for="paypal">
-                        <input type="radio" id="paypal" name="payment-method" value="paypal">
-                        PayPal
-                    </label>
-                </div>
-                <!-- Order Section -->
-                <div class="order-container">
-                    <h3>Your Order</h3>
-                    <div class="order-item">
-                        <p>x1   Item Name - Variant</p>
+            <!-- Checkout Page -->
+            <section id="checkout-page">
+                <h1>Checkout</h1>
+                <div id="billing-n-order">
+                    <!-- Billing Details -->
+                    <div class="billing-details-container">
+                        <h3>Billing Details</h3>
+                        <form id="billing-details-form">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+            
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="first-name" required>
+            
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="last-name" required>
+            
+                            <label for="country">Country</label>
+                            <input type="text" id="country" name="country" required>
+            
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="address" required>
+            
+                            <label for="postal-code">Postal Code / ZIP</label>
+                            <input type="text" id="postal-code" name="postal-code" required>
+            
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </form>
+            
+                        <h3>Payment Method</h3>
+                        <label>
+                            <input type="radio" name="payment-method" value="credit-card" required>
+                            Credit / Debit Card
+                        </label>
+                        <label>
+                            <input type="radio" name="payment-method" value="paypal">
+                            PayPal
+                        </label>
                     </div>
-                    <div class="promo-code">
-                        <input type="text" id="promo-code" name="promo-code" placeholder="Enter code">
-                        <button>Apply</button>
-                    </div>
-                    <div class="order-prices-container">
-                        <div class="label">
-                            <p>Subtotal</p>
-                            <p>Shipping</p>
-                            <h3>Total</h3>
+            
+                    <!-- Order Summary -->
+                    <div class="order-container">
+                        <h3>Your Order</h3>
+                        <!-- Fix: Added proper container for the dynamic items -->
+                        <div class="order-items">
+                            <!-- Products will be dynamically inserted here -->
                         </div>
-                        <div class="prices">
-                            <p>$99.90</p>
-                            <p>$10.00</p>
-                            <h3>$108.00</h3>
+            
+                        <div class="promo-code">
+                            <input type="text" id="promo-code" name="promo-code" placeholder="Enter code">
+                            <button>Apply</button>
                         </div>
+            
+                        <div class="order-prices-container">
+                            <div class="label">
+                                <p>Subtotal</p>
+                                <h3>Total</h3>
+                            </div>
+                            <div class="prices">
+                                <p>$0.00</p> <!-- Subtotal (Updated via JS) -->
+                                <h3>$0.00</h3> <!-- Total (Updated via JS) -->
+                            </div>
+                        </div>
+                        <button id="place-order-button">Place Order</button>
                     </div>
-                    <button id="place-order-button">Place Order</button>
                 </div>
-            </div>
-        </section>
+            </section>            
+            
+        </div> 
         <section id="footer-container">
             <footer class="foot">
                 <img src="images/Logos/HoYoverse-Logo.png" alt="HoYoverse Logo">
@@ -123,11 +127,14 @@
             </footer>
         </section>
         <!-- Scripts -->
+        <script src="js/product-details.js"></script>
         <script src="js/account-info.js"></script>
         <!-- NOTIFICATION POP UP -->
         <script src="js/notification.js"></script>
         <script src="js/check-in.js"></script>
         <!-- CART -->
         <script src="js/cart.js"></script>
+        <!-- CHECKOUT -->
+        <script src="checkout.js"></script>
     </body>
 </html>
