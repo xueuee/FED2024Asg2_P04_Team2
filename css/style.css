@@ -749,6 +749,7 @@ nav #search {
     flex-direction: row;
     justify-content: space-between; /* Ensures space between the profile and codes containers */
     width: 100%;
+    min-width: 1000px;
     gap: 50px;
 }
 
@@ -757,6 +758,10 @@ nav #search {
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.user-info h1 {
+    font-weight: 300;
 }
 
 /* Active Codes */
@@ -773,16 +778,21 @@ nav #search {
     justify-content: space-between;
     gap: 15px;
     padding: 25px 25px;
-    background-color: rgb(199, 211, 220);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(192, 192, 192);
+    border-radius: 15px;
 }
 
 .code-button {
-    background-color: rgb(135, 146, 199);
     border-radius: 5px;
     padding: 1px 12px;
     text-align: center;
     width: calc(50% - 10px); 
+    min-width: 200px;
     box-sizing: border-box; /* Include padding and margin in the width calculation */
+    font-weight: 300;
+    color: white;
+    background: linear-gradient(110deg, rgb(38, 30, 70), rgb(21, 17, 26));
 }
 
 /* User Profile Picture */
@@ -790,7 +800,7 @@ nav #search {
     border-radius: 150px;
     width: 200px;
     height: auto;
-    padding: 10px 15px;
+    margin-right: 50px;
 }
 
 /* Logout button */
@@ -808,10 +818,6 @@ nav #search {
     transition: background-color 0.2s ease;
 }
 
-#profile-n-codes button:hover {
-    background-color: rgb(175, 216, 248)
-}
-
 /*
 @media screen and (max-width: 800px) 
 @media screen and (max-width: 1000px) {
@@ -823,11 +829,12 @@ nav #search {
 }
 
 .check-in-items {
-    background-color: #d2e1fa;
+    background-color: #dfcffc;
     display: flex;
     justify-content: space-evenly; /* Even spacing */
     align-items: center;
-    padding: 15px;
+    padding: 25px;
+    gap: 15px;
 }
 
 /* Style each check-in item */
@@ -837,11 +844,22 @@ nav #search {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(192, 192, 192);
+    border-radius: 15px;
+    transition: transform 0.2s ease-in-out;
 }
 
 .check-in-item p {
-    font-weight: bold;
+    font-weight: 200;
+    margin: 8px;
+}
+
+.check-in-day {
+    color: white;
+    background: linear-gradient(110deg,rgb(155, 180, 206), rgb(149, 115, 203), rgb(222, 150, 223));
+    width: 100%;
+    border-radius: 0 0 14px 14px;
 }
 
 /* Make Day 7 wider */
