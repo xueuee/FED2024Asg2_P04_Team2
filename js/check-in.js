@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 document.addEventListener("DOMContentLoaded", function () {
     const checkInStatus = document.getElementById("check-in-status");
     const checkInImages = document.querySelectorAll(".check-in-item img");

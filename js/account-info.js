@@ -1,3 +1,4 @@
+/* jshint esversion: 8 */
 document.addEventListener("DOMContentLoaded", function () {
     const API_URL = "https://fedassg2-7280.restdb.io/rest/mokesell-user";
     const API_KEY = "6795cbad2e42649902d2397f";
