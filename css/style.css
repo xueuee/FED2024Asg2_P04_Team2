@@ -847,7 +847,7 @@ nav #search {
 #codes-container {
     display: flex;
     flex-direction: column;
-    width: 45%;
+    width: 48%;
     margin-right: 40px;
 }
 
@@ -897,10 +897,36 @@ nav #search {
     transition: background-color 0.2s ease;
 }
 
-/*
-@media screen and (max-width: 800px) 
-@media screen and (max-width: 1000px) {
-}*/
+/* Mobile Media Queries */
+/* (Tablets and below) */
+@media (max-width: 1000px) {
+    #profile-n-codes {
+        flex-direction: column;
+        width: auto;
+        min-width: none;
+        gap: 20px;
+    }
+
+    #codes-container {
+        width: 500px;
+        align-self: left;
+        margin: 0 10%;
+    }
+
+    .code-box {
+        gap: 15px;
+        padding: 25px 25px;
+    }
+}
+
+/* (Mobile) */
+@media (max-width: 670px) {
+    #codes-container {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+    }
+}
 
 /* Daily Check-in */
 #check-in-container {
