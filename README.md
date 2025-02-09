@@ -9,6 +9,8 @@ You can view the wireframe here: [Wireframe](https://www.figma.com/design/AhdB5w
 
 and the github repository here: [Github Repository](https://github.com/xueuee/FED2024Asg2_P04_Team2)
 
+and you can view the website video presentation here: [Video Presentation](https://drive.google.com/file/d/1zpLRB-GgysorGLhBfuFdYz2mqtvBamXs/view?usp=sharing)
+
 ## Features
 ### Existing Features
 * Feature 1 - LOTTIE
