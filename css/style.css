@@ -611,8 +611,7 @@ nav #search {
 #listings .pro {
     width: 23%;
     min-width: 250px;
-    height: 50%;
-    max-height: 500px;
+    height: 100%;
     padding: 15px; /* Increased padding for better spacing */
     border: 1px solid #cce7d0;
     border-radius: 25px;
@@ -773,7 +772,7 @@ nav #search {
 #more-products .pro {
     width: 23%;
     min-width: 250px;
-    height: 60vh;
+    height: 100%;
     padding: 15px; /* Increased padding for better spacing */
     border: 1px solid #cce7d0;
     border-radius: 25px;
