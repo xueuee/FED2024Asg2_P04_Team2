@@ -12,21 +12,61 @@
     z-index: 9999;
 }
 
-/* DEFAULT */
+/*------------------------------------------------------------------------*/
+/* MEDIA QUERIES FOR TABLETS (768px and below) */
+@media (max-width: 768px) {
+    #loading {
+        width: 100%;
+        height: 100%;
+        background-color: white;
+    }
+
+    /* Reduce animation size on tablets */
+    #loading lottie-player {
+        max-width: 60%;
+        max-height: 60%;
+    }
+}
+
+/*------------------------------------------------------------------------*/
+/* MEDIA QUERIES FOR MOBILE (480px and below) */
+@media (max-width: 480px) {
+    #loading {
+        width: 100%;
+        height: 100%;
+        background-color: white;
+    }
+
+    /* Further reduce animation size for small screens */
+    #loading lottie-player {
+        max-width: 50%;
+        max-height: 50%;
+    }
+}
+
+/* DEFAULT STYLES - Ensure footer stays at bottom */
 html, body {
     height: 100%;
     margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Kanit', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 body {
+    min-height: 100vh; /* Ensures full height */
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    font-family: 'Kanit', sans-serif;
 }
 
 #main {
-    flex: 1;
+    flex: 1; /* Pushes content to fill available space */
+}
+
+#footer-container {
+    flex-shrink: 0; /* Prevents footer from disappearing */
 }
 
 /*------------------------------------------------------------------------*/
@@ -62,6 +102,103 @@ body {
     color: lightgray;
     text-align: center;
     position: relative;
+}
+
+/*------------------------------------------------------------------------*/
+/* FOOTER */
+
+#footer-container {
+    background-image: url("https://xueuee.github.io/FED2024Asg2_P04_Team2/images/Logos/Header-BG.webp"); /* Corrected file path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Prevents tiling */
+    font-size: 16px;
+    font-family: 'Julius Sans One', sans-serif;
+    color: black;
+    text-align: center;
+    width: 100%;
+}
+
+/* Footer content styles */
+.foot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.foot img {
+    padding-top: 10px;
+    width: 150px;
+    height: auto;
+}
+
+.foot h4 {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+}
+
+/*------------------------------------------------------------------------*/
+/* MEDIA QUERIES FOR HEADER & FOOTER */
+
+/* Tablets and below (768px and smaller) */
+@media (max-width: 768px) {
+    /* Adjust header height */
+    #header {
+        height: 120px;
+        padding: 10px 0;
+    }
+
+    /* Resize header text */
+    #header header h1 {
+        font-size: 45px;
+    }
+
+    #header header h2 {
+        font-size: 12px;
+    }
+
+    /* Footer adjustments */
+    #footer-container {
+        padding: 10px 0;
+    }
+
+    .foot img {
+        width: 120px;
+    }
+
+    .foot h4 {
+        font-size: 12px;
+    }
+}
+
+/* Mobile screens (480px and smaller) */
+@media (max-width: 480px) {
+    /* Further reduce header size */
+    #header {
+        height: 100px;
+    }
+
+    #header header h1 {
+        font-size: 35px;
+    }
+
+    #header header h2 {
+        font-size: 10px;
+    }
+
+    /* Ensure footer stays at bottom */
+    #footer-container {
+        padding: 5px 0;
+    }
+
+    .foot img {
+        width: 100px;
+    }
+
+    .foot h4 {
+        font-size: 10px;
+    }
 }
 
 nav {
@@ -586,7 +723,7 @@ nav #search {
 }
 
 .product-img img {
-    width: 50vh;
+    max-width: 100%;
     border-radius: 20px;
 }
 
@@ -730,6 +867,105 @@ nav #search {
 }
 
 /*------------------------------------------------------------------------*/
+/* MEDIA QUERIES FOR TABLETS (768px and below) */
+@media (max-width: 768px) {
+    /* Stack image and details vertically */
+    #product-page .product-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    /* Adjust product image */
+    .product-img {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .product-img img {
+        width: 100%;
+        max-height: 300px;
+    }
+
+    /* Center product details */
+    .product-details {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    /* "You May Also Like" Section */
+    #more-products .product-container {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    #more-products .pro {
+        width: 45%;
+        height: auto;
+    }
+}
+
+/*------------------------------------------------------------------------*/
+/* MEDIA QUERIES FOR MOBILE (480px and below) */
+@media (max-width: 480px) {
+    /* Reduce padding for smaller screens */
+    #product-page {
+        padding-left: 10px;
+    }
+
+    /* Product Image */
+    .product-img {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .product-img img {
+        width: 100%;
+        max-height: 250px;
+    }
+
+    /* Product Details */
+    .product-details h2 {
+        font-size: 14px;
+    }
+
+    .product-details p {
+        font-size: 12px;
+    }
+
+    /* Ensure "You May Also Like" products stack properly */
+    #more-products .product-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #more-products .pro {
+        width: 90%;
+        height: auto;
+    }
+
+    /* Reduce button and quantity input size */
+    .quantity-selector #quantity {
+        width: 50px;
+        padding: 8px;
+    }
+
+    .add-to-cart {
+        width: 100%;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    /* Center error messages */
+    .error-message {
+        text-align: center;
+        font-size: 12px;
+    }
+}
+
+/*------------------------------------------------------------------------*/
 /* Cart Section */
 #Cart {
     background: white;
@@ -821,14 +1057,97 @@ nav #search {
 }
 
 /*------------------------------------------------------------------------*/
+/* MEDIA QUERIES FOR TABLETS (768px and below) */
+@media (max-width: 768px) {
+    /* Reduce cart container padding */
+    #Cart {
+        padding: 20px;
+    }
+
+    /* Stack cart items vertically */
+    .cart-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    /* Reduce cart item image size */
+    .cart-item img {
+        max-width: 50px;
+    }
+
+    /* Center cart details */
+    .cart-details {
+        text-align: center;
+    }
+
+    /* Adjust cart summary width */
+    #cart-summary {
+        max-width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+}
+
+/*------------------------------------------------------------------------*/
+/* MEDIA QUERIES FOR MOBILE (480px and below) */
+@media (max-width: 480px) {
+    /* Reduce cart container padding */
+    #Cart {
+        padding: 15px;
+    }
+
+    /* Further stack cart items */
+    .cart-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    /* Make cart item images smaller */
+    .cart-item img {
+        max-width: 40px;
+    }
+
+    /* Adjust cart details font size */
+    .cart-details p {
+        font-size: 14px;
+    }
+
+    /* Make quantity input and remove button more accessible */
+    .cart-item input {
+        width: 40px;
+        padding: 4px;
+    }
+
+    .cart-item button {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+
+    /* Adjust cart summary layout */
+    #cart-summary {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Resize checkout button */
+    #cart-summary button {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+/*------------------------------------------------------------------------*/
 /* ACCOUNT */
 #profile-n-codes {
     margin: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between; /* Ensures space between the profile and codes containers */
-    width: 100%;
-    min-width: 1000px;
+    max-width: 100%;
     gap: 50px;
 }
 
@@ -895,37 +1214,6 @@ nav #search {
     margin: 10px 2px;
     cursor: pointer;
     transition: background-color 0.2s ease;
-}
-
-/* Mobile Media Queries */
-/* (Tablets and below) */
-@media (max-width: 1000px) {
-    #profile-n-codes {
-        flex-direction: column;
-        width: auto;
-        min-width: none;
-        gap: 20px;
-    }
-
-    #codes-container {
-        width: 500px;
-        align-self: left;
-        margin: 0 10%;
-    }
-
-    .code-box {
-        gap: 15px;
-        padding: 25px 25px;
-    }
-}
-
-/* (Mobile) */
-@media (max-width: 670px) {
-    #codes-container {
-        display: flex;
-        flex-direction: column;
-        width: 250px;
-    }
 }
 
 /* Daily Check-in */
@@ -1053,6 +1341,129 @@ nav #search {
 .option a:hover {
     background-color: #ccc; /* Slightly darker gray */
     color: black;
+}
+
+/*------------------------------------------------------------------------*/
+/* MEDIA QUERIES FOR TABLETS (768px and below) */
+@media (max-width: 768px) {
+    /* Stack profile and codes on smaller screens */
+    #profile-n-codes {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 30px;
+    }
+
+    /* Ensure profile container scales properly */
+    #profile-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .user-profile-pic img {
+        width: 150px;
+        margin: 0 auto;
+    }
+
+    /* Fix codes container width */
+    #codes-container {
+        width: 90%;
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /* Code buttons stack properly */
+    .code-button {
+        width: 100%;
+    }
+
+    /* Fix daily check-in items */
+    .check-in-items {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .check-in-item {
+        flex: 1 1 45%; /* Makes check-in items scale properly */
+        max-width: 150px;
+    }
+
+    .check-in-item img {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Ensure "Other Options" section is responsive */
+    #other-options-container {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .option a {
+        width: 80px;
+        height: 80px;
+        font-size: 30px;
+    }
+}
+
+/*------------------------------------------------------------------------*/
+/* MEDIA QUERIES FOR MOBILE (480px and below) */
+@media (max-width: 480px) {
+    /* Reduce profile image size */
+    .user-profile-pic img {
+        width: 120px;
+    }
+
+    /* Adjust text size */
+    .user-info h1 {
+        font-size: 18px;
+    }
+
+    /* Make codes container take full width */
+    #codes-container {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Stack check-in items properly */
+    .check-in-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .check-in-item {
+        width: 80%;
+        max-width: 250px;
+    }
+
+    .check-in-item img {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Reduce button sizes */
+    .code-button {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    /* Ensure other options are centered */
+    #other-options-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .option a {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+    }
+
+    .option p {
+        font-size: 14px;
+    }
 }
 
 /*------------------------------------------------------------------------*/
@@ -1235,6 +1646,54 @@ nav #search {
     margin-top: 20px;
 }
 
+/* Responsive Styles for Tablets & Mobile */
+@media (max-width: 768px) {
+    #billing-n-order {
+        flex-direction: column; /* Stack billing and order summary */
+        gap: 20px;
+    }
+
+    .billing-details-container, 
+    .order-container {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    /* Adjust input fields */
+    .billing-details-container input {
+        font-size: 1rem; /* Increase font size for better readability */
+    }
+
+    /* Adjust promo code input & button */
+    .promo-code {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .promo-code input {
+        width: 100%; /* Full width */
+    }
+
+    .order-container button {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
+
+/* Further Adjustments for Mobile */
+@media (max-width: 480px) {
+    #checkout-page h1 {
+        font-size: 2rem; /* Reduce heading size */
+    }
+
+    .order-item p {
+        font-size: 14px; /* Reduce font size for better fit */
+    }
+
+    .order-container button {
+        font-size: 0.9rem; /* Reduce button size for smaller screens */
+    }
+}
+
 /*------------------------------------------------------------------------*/
 /* ORDER CONFIRMATION */
 #order-confirmation {
@@ -1286,60 +1745,4 @@ nav #search {
 
 .order-confirmed-container button:hover {
     background-color: #b1aaff;
-}
-
-/*------------------------------------------------------------------------*/
-/* FOOTER */
-
-#footer-container {
-    background-image: url("https://xueuee.github.io/FED2024Asg2_P04_Team2/images/Logos/Header-BG.webp"); /* Corrected file path */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; /* Prevents tiling */
-    font-size: 16px;
-    font-family: 'Julius Sans One', sans-serif;
-    color: black;
-    text-align: center;
-    width: 100%;
-}
-
-/* Footer content styles */
-.foot {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.foot img {
-    padding-top: 10px;
-    width: 150px;
-    height: auto;
-}
-
-.foot h4 {
-    font-size: 14px;
-    font-weight: 400;
-    color: white;
-}
-
-/* Start Media Query */
-/* @media (max-width: 799px) {
-    #navbar {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        position: fixed;
-        top: 0;
-        right: -350px;
-        height: 100vh;
-        width: 300px;
-        background-color: #dedcdc;
-        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
-        padding: 80px 0 0 10px;
-    }
-
-    #navbar li {
-        margin-bottom: 25px;
-    }
 }
