@@ -97,7 +97,7 @@ All rights belong to their respective owners, products shown and events stipulat
 
 ### Media
 * Lottie Animation made by [Wee Xin Yi](https://github.com/vynniex)
-* HoYoverse Logo and Games Icons taken from [HoYoverse Offical](https://www.hoyoverse.com/en-us/about-us)
+* HoYoverse Logo and Games Icons taken from [HoYoverse Official](https://www.hoyoverse.com/en-us/about-us)
 * Search Icon made by [Smashicons](https://www.flaticon.com/authors/smashicons) from [Flaticon](https://www.flaticon.com/)
 * Other Icons (cart, bell, etc.) made by [FontAwesome](https://fontawesome.com/icons)
 * Product photos and details taken from [HoYoMerch](https://hoyomerch.com/shop/) and [Hoyo.global](https://hoyo.global)
